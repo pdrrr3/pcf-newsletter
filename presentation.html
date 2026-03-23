@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A psychological profile of today's GTA pre-construction realtor and a data-driven newsletter campaign strategy designed to reach them where they are.">
+<meta property="og:title" content="GTA Precon Realtor Newsletter Strategy">
+<meta property="og:description" content="A data-driven newsletter campaign strategy for reaching GTA pre-construction realtors — built on psychological profiling, market intelligence, and tactical content design.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GTA Precon Realtor Newsletter Strategy">
+<meta name="twitter:description" content="A data-driven newsletter campaign strategy for reaching GTA pre-construction realtors — built on psychological profiling, market intelligence, and tactical content design.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230a0a0f'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%23ff4d4d' font-family='sans-serif' font-weight='900'>P</text></svg>">
+<title>GTA Precon Realtor Newsletter Strategy — March 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+<style>
+
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --surface-2: #1a1a26;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --text-muted: #a0a0b8;
+    --accent: #ff4d4d;
+    --accent-2: #ff6b35;
+    --accent-3: #ffd700;
+    --blue: #4da6ff;
+    --green: #4dff88;
+    --purple: #a855f7;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* Navigation */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav .logo {
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  nav .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  nav .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.3s;
+  }
+
+  nav .nav-links a:hover { color: var(--text); }
+
+  /* Sections */
+  section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    padding: 100px 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .hero .kicker {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero .subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+  }
+
+  .hero .date-badge {
+    display: inline-block;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  /* Big Number */
+  .big-number {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+  }
+
+  .big-number .number {
+    font-size: clamp(5rem, 12vw, 10rem);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .big-number .context h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .big-number .context p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Section headers */
+  .section-kicker {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+
+  /* Emotion Cards */
+  .emotions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .emotion-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .emotion-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+
+  .emotion-card .rank {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .emotion-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .emotion-card .quote {
+    font-style: italic;
+    color: var(--accent-3);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .emotion-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Stats Row */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .stat-card .stat-value {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-card .stat-value.red { color: var(--accent); }
+  .stat-card .stat-value.gold { color: var(--accent-3); }
+  .stat-card .stat-value.blue { color: var(--blue); }
+  .stat-card .stat-value.green { color: var(--green); }
+  .stat-card .stat-value.purple { color: var(--purple); }
+
+  .stat-card .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* Needs Table */
+  .needs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+
+  .needs-table th {
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .needs-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+
+  .needs-table td:first-child {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--accent);
+    width: 50px;
+    text-align: center;
+  }
+
+  .needs-table td:nth-child(2) {
+    font-weight: 600;
+  }
+
+  .needs-table td:last-child {
+    color: var(--text-muted);
+  }
+
+  .needs-table tr:hover td {
+    background: var(--surface);
+  }
+
+  /* Positioning Block */
+  .positioning-block {
+    background: linear-gradient(135deg, #1a0a0a 0%, #0a0a1a 100%);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .positioning-block .tagline {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--accent-3);
+  }
+
+  .positioning-block p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .tagline-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .tagline-option {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  /* Template Section Cards */
+  .template-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .template-card {
+    display: flex;
+    gap: 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    align-items: flex-start;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .template-card:hover {
+    transform: translateX(8px);
+    border-color: var(--accent);
+  }
+
+  .template-card .card-num {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 60px;
+  }
+
+  .template-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .template-card .card-subtitle {
+    font-size: 0.85rem;
+    color: var(--accent-3);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .template-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .template-card .example {
+    margin-top: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--surface-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.85rem;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  /* Rollout Timeline */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .timeline-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .timeline-card::before {
+    content: attr(data-week);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--accent);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 0.3rem 0.75rem;
+    border-radius: 0 12px 0 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .timeline-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    padding-right: 60px;
+  }
+
+  .timeline-card .tl-number {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--accent-3);
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-card .tl-context {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .timeline-card .tl-play {
+    font-size: 0.8rem;
+    color: var(--blue);
+    font-weight: 500;
+  }
+
+  /* Subject Lines */
+  .subject-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .subject-line {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .subject-line .sl-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--surface-2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  /* Psychology Arc */
+  .arc-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 1.5rem 0;
+    position: relative;
+  }
+
+  .arc-step {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    position: relative;
+  }
+
+  .arc-step:first-child { border-radius: 16px 16px 0 0; }
+  .arc-step:last-child { border-radius: 0 0 16px 16px; }
+  .arc-step + .arc-step { border-top: none; }
+
+  .arc-step .arc-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--accent);
+    min-width: 160px;
+  }
+
+  .arc-step .arc-arrow {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+  }
+
+  .arc-step .arc-feeling {
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  .arc-step .arc-emotion {
+    margin-left: auto;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--green);
+    background: rgba(77, 255, 136, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  /* Monetization */
+  .tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .tier-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .tier-card.featured {
+    border-color: var(--accent);
+    background: linear-gradient(180deg, #1a0a0a 0%, var(--surface) 100%);
+  }
+
+  .tier-card:hover { transform: translateY(-4px); }
+
+  .tier-card .tier-name {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .tier-card .tier-price {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .tier-card .tier-features {
+    list-style: none;
+    text-align: left;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .tier-card .tier-features li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tier-card .tier-features li:last-child { border-bottom: none; }
+
+  /* Data Appendix */
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .data-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .data-group h4 {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .data-group ul {
+    list-style: none;
+  }
+
+  .data-group li {
+    padding: 0.4rem 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(42, 42, 58, 0.5);
+  }
+
+  .data-group li:last-child { border-bottom: none; }
+
+  .data-group li strong {
+    color: var(--text);
+  }
+
+  /* Final CTA */
+  .final-section {
+    text-align: center;
+  }
+
+  .final-quote {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  .final-quote em {
+    color: var(--text);
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .sources {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 3rem auto 0;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  /* Growth Section */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  .col-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+
+  .col-card h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-3);
+    margin-bottom: 1rem;
+  }
+
+  .col-card ol, .col-card ul {
+    padding-left: 1.2rem;
+  }
+
+  .col-card li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 0.4rem 0;
+    line-height: 1.5;
+  }
+
+  .col-card li strong {
+    color: var(--text);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    section { padding: 80px 1.25rem 3rem; }
+    .big-number { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .template-card { flex-direction: column; gap: 1rem; }
+    .template-card .card-num { width: auto; font-size: 2rem; }
+    .two-col { grid-template-columns: 1fr; }
+    .arc-step { flex-wrap: wrap; gap: 0.5rem; }
+    .arc-step .arc-emotion { margin-left: 0; }
+    nav .nav-links { display: none; }
+  }
+
+  /* Scroll animations */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+    will-change: auto;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fade-up {
+      opacity: 1;
+      transform: none;
+      transition: none;
+      will-change: auto;
+    }
+    .emotion-card,
+    .template-card,
+    .tier-card {
+      transition: none;
+    }
+    .emotion-card:hover,
+    .template-card:hover,
+    .tier-card:hover {
+      transform: none;
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    :root {
+      --bg: #fff;
+      --surface: #fff;
+      --surface-2: #f5f5f5;
+      --border: #ccc;
+      --text: #000;
+      --text-muted: #444;
+      --accent: #c00;
+      --accent-2: #c44;
+      --accent-3: #996600;
+      --blue: #0055aa;
+      --green: #007733;
+      --purple: #6622aa;
+    }
+    body { background: #fff; color: #000; }
+    nav { display: none; }
+    section {
+      min-height: auto;
+      scroll-snap-align: none;
+      page-break-inside: avoid;
+      padding: 1rem 0;
+    }
+    .fade-up {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .hero h1 {
+      background: none;
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: #000;
+    }
+    .positioning-block {
+      background: #f5f5f5;
+      border-color: #ccc;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;top:-100%;left:0;background:var(--accent);color:#fff;padding:0.75rem 1.5rem;z-index:10000;font-weight:600;font-size:0.9rem;text-decoration:none;border-radius:0 0 8px 0;" onfocus="this.style.top='0'" onblur="this.style.top='-100%'">Skip to content</a>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="logo">PCF Newsletter Strategy</div>
+  <ul class="nav-links" role="list">
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#needs">Needs</a></li>
+    <li><a href="#strategy">Strategy</a></li>
+    <li><a href="#template">Template</a></li>
+    <li><a href="#rollout">Rollout</a></li>
+    <li><a href="#psychology">Psychology</a></li>
+    <li><a href="#data">Data</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<main id="main-content">
+<section class="hero" id="hero" aria-label="Hero introduction">
+  <div class="fade-up">
+    <div class="kicker">Research Synthesis & Campaign Blueprint</div>
+    <h1>The GTA Precon Realtor<br>Newsletter Strategy</h1>
+    <p class="subtitle">A psychological profile of today's pre-construction realtor and a data-driven newsletter campaign designed to reach them where they are.</p>
+    <div class="date-badge">March 2026 &mdash; Compiled from 30+ sources</div>
+  </div>
+</section>
+
+<!-- THE MARKET -->
+<section id="market" aria-label="Market reality">
+  <div class="fade-up">
+    <div class="section-kicker">The Market Reality</div>
+    <div class="big-number">
+      <div class="number">95%</div>
+      <div class="context">
+        <h2>Sales have collapsed from peak.</h2>
+        <p>New condo sales hit 1,599 units in 2025 &mdash; the lowest since 1991, down 91% from the decade average. Q4 2025 saw just 262 sales. The worst quarterly figure in 34 years. This isn't a correction. It's a generational low.</p>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value red">28</div>
+        <div class="stat-label">Projects cancelled in 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value gold">$605K</div>
+        <div class="stat-label">Avg condo price (down 9.8% YoY)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value blue">2.25%</div>
+        <div class="stat-label">Bank of Canada rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value purple">8.1%</div>
+        <div class="stat-label">Toronto unemployment</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value red">30-40%</div>
+        <div class="stat-label">Losses for 2022-23 investors</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value gold">$130K</div>
+        <div class="stat-label">Max HST rebate (new policy)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PSYCHOLOGICAL PROFILE -->
+<section id="profile" aria-label="Psychological profile">
+  <div class="fade-up">
+    <div class="section-kicker">Part 1 &mdash; Psychological Profile</div>
+    <h2 class="section-title">What the GTA precon realtor<br>is feeling right now.</h2>
+    <p class="section-subtitle">The dominant emotions, ranked by intensity. Understanding these is the foundation of any content strategy that actually connects.</p>
+    <div class="emotions-grid">
+      <div class="emotion-card">
+        <div class="rank">#1 DOMINANT EMOTION</div>
+        <h3>Exhaustion</h3>
+        <div class="quote">"How much longer can I hold on?"</div>
+        <p>2+ years of declining market with no confirmed bottom. The mental toll of commission-based income unpredictability is severe &mdash; real estate has the second-highest rate of clinically diagnosed depression among all professions.</p>
+      </div>
+      <div class="emotion-card">
+        <div class="rank">#2</div>
+        <h3>Financial Anxiety</h3>
+        <div class="quote">"Am I going to make it?"</div>
+        <p>Income at generational lows while fixed costs climb. ORWP fees surged 700%, RECO insurance, board fees, brokerage costs &mdash; all due whether you close zero deals or twenty. TRREB membership dropped 8%.</p>
+      </div>
+      <div class="emotion-card">
+        <div class="rank">#3</div>
+        <h3>Distrust</h3>
+        <div class="quote">"I've heard 'recovery' before."</div>
+        <p>Deep skepticism of optimistic forecasts, developer promises, and government announcements. They've watched 28 projects cancel. They need proof, not predictions.</p>
+      </div>
+      <div class="emotion-card">
+        <div class="rank">#4</div>
+        <h3>Isolation</h3>
+        <div class="quote">"Everyone's leaving."</div>
+        <p>Fewer peers (agents leaving the industry), fewer deals, fewer VIP events, less community. The social fabric of the precon world has thinned dramatically.</p>
+      </div>
+      <div class="emotion-card">
+        <div class="rank">#5</div>
+        <h3>Hunger for Direction</h3>
+        <div class="quote">"Tell me what to DO."</div>
+        <p>Desperate for someone who isn't just reporting what's happening, but telling them what concrete action to take this week. Theory is useless. Scripts, plays, and tactics are gold.</p>
+      </div>
+      <div class="emotion-card">
+        <div class="rank">#6</div>
+        <h3>Guarded Optimism</h3>
+        <div class="quote">"There are some signals..."</div>
+        <p>Rates at 2.25%. HST rebate worth $130K. Foreign buyer ban expiring Jan 2027. Supply correction underway. The signals are real &mdash; but they've been burned before.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IDENTITY CRISIS -->
+<section aria-label="The broken playbook">
+  <div class="fade-up">
+    <div class="section-kicker">The Deeper Issue</div>
+    <h2 class="section-title">The playbook is broken.</h2>
+    <p class="section-subtitle">The entire precon business model &mdash; VIP launches, platinum access, investor clients flipping on assignment &mdash; has evaporated.</p>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value red">7,000+</div>
+        <div class="stat-label">Units cancelled in 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value gold">28,000</div>
+        <div class="stat-label">Units completing in 2026 (closing wave)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value blue">~3,000</div>
+        <div class="stat-label">Units taken back by developers in 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value purple">1M+</div>
+        <div class="stat-label">Mortgages renewing in 2026</div>
+      </div>
+    </div>
+    <div class="stats-row" style="margin-top:0">
+      <div class="stat-card">
+        <div class="stat-value red">135</div>
+        <div class="stat-label">Active projects (down from 206)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value gold">35,000</div>
+        <div class="stat-label">Construction jobs lost</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value green">3,897</div>
+        <div class="stat-label">Completed unsold units (up 131%)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value blue">5-9%</div>
+        <div class="stat-label">Rents down YoY</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMATION NEEDS -->
+<section id="needs" aria-label="Information needs">
+  <div class="fade-up">
+    <div class="section-kicker">What They're Searching For</div>
+    <h2 class="section-title">The information hierarchy.</h2>
+    <p class="section-subtitle">Ranked by urgency. Every piece of newsletter content should map to one of these needs.</p>
+    <table class="needs-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>What They Want</th>
+          <th>Why It Matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Which projects are actually launching</td><td>No product = no income. They need to know where the next deal is.</td></tr>
+        <tr><td>2</td><td>Developer financial health / reliability</td><td>Can't afford to sell a project that gets cancelled. Reputation is everything.</td></tr>
+        <tr><td>3</td><td>Policy changes they can pitch to buyers</td><td>HST rebate, GST elimination, foreign buyer ban expiry &mdash; these are sales tools.</td></tr>
+        <tr><td>4</td><td>The closing crisis &mdash; what to tell clients</td><td>Clients are panicking. Agents need scripts, strategies, and options.</td></tr>
+        <tr><td>5</td><td>Career survival strategies</td><td>How to diversify, pivot, what adjacent niches work.</td></tr>
+        <tr><td>6</td><td>Honest market timing signals</td><td>Not cheerleading &mdash; real data on when the bottom hits and recovery begins.</td></tr>
+        <tr><td>7</td><td>What's working for other agents</td><td>Success stories, tactical wins, proof that survival is possible.</td></tr>
+        <tr><td>8</td><td>Macro context they can explain simply</td><td>Tariffs, immigration cuts, rates &mdash; clients ask. Agents need clear, simple answers.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- STRATEGY / POSITIONING -->
+<section id="strategy" aria-label="Newsletter strategy and positioning">
+  <div class="fade-up">
+    <div class="section-kicker">Part 2 &mdash; Newsletter Strategy</div>
+    <h2 class="section-title">The positioning.</h2>
+    <p class="section-subtitle">Every other newsletter is either cheerleading or doom-scrolling. Neither serves the agent who needs to operate in this market right now.</p>
+    <div class="positioning-block">
+      <div class="tagline">Not optimistic. Not pessimistic.<br>Operational.</div>
+      <p>The unflinching, practical, data-driven guide for precon realtors who are choosing to stay in the game.</p>
+      <div class="tagline-options">
+        <div class="tagline-option">"Intelligence for realtors who aren't leaving."</div>
+        <div class="tagline-option">"Data. Deals. Direction."</div>
+        <div class="tagline-option">"The precon market is brutal. Here's how to work it anyway."</div>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value blue" style="font-size:1.8rem">Weekly</div>
+        <div class="stat-label">Tue/Wed, 10 AM ET</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value green" style="font-size:1.8rem">3-5 min</div>
+        <div class="stat-label">Total read time</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value gold" style="font-size:1.8rem">5 sections</div>
+        <div class="stat-label">Consistent template</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value purple" style="font-size:1.8rem">Data-first</div>
+        <div class="stat-label">Conversational, no fluff</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE TEMPLATE -->
+<section id="template" aria-label="Newsletter template">
+  <div class="fade-up">
+    <div class="section-kicker">The Template</div>
+    <h2 class="section-title">Five recurring sections.</h2>
+    <p class="section-subtitle">Each section maps to a psychological need. Together they create an emotional arc from validation to clarity.</p>
+    <div class="template-cards">
+      <div class="template-card">
+        <div class="card-num">01</div>
+        <div>
+          <h3>THE NUMBER</h3>
+          <div class="card-subtitle">Header stat that hooks</div>
+          <p>One striking data point with a one-sentence interpretation. This is the subject line driver and the reason they open the email.</p>
+          <div class="example">"262 &mdash; That's how many new condos sold in Q4 2025. The lowest in 34 years. Here's why Q2 2026 might be different."</div>
+        </div>
+      </div>
+      <div class="template-card">
+        <div class="card-num">02</div>
+        <div>
+          <h3>LAUNCH RADAR</h3>
+          <div class="card-subtitle">What's actually coming to market</div>
+          <p>Projects launching in the next 30-60 days. Pricing, incentives, commission structures, developer track record. <strong>This is the #1 reason agents will subscribe.</strong> No one else aggregates this reliably.</p>
+        </div>
+      </div>
+      <div class="template-card">
+        <div class="card-num">03</div>
+        <div>
+          <h3>POLICY DECODER</h3>
+          <div class="card-subtitle">Translate policy into sales language</div>
+          <p>Plain-English breakdown of one policy change per week, plus the 30-second pitch version agents can use with buyers.</p>
+          <div class="example">"The Ontario HST rebate saves your first-time buyer up to $130K on a $1M precon unit. Here's the exact math and the script."</div>
+        </div>
+      </div>
+      <div class="template-card">
+        <div class="card-num">04</div>
+        <div>
+          <h3>THE PLAY</h3>
+          <div class="card-subtitle">One tactical move this week</div>
+          <p>Not theory &mdash; one specific, concrete action. Scripts, pitches, pivot strategies, and real examples from agents who are making it work.</p>
+          <div class="example">"3 developers offering 5/5/5 deposit structures right now &mdash; here's how to pitch extended deposits to hesitant buyers."</div>
+        </div>
+      </div>
+      <div class="template-card">
+        <div class="card-num">05</div>
+        <div>
+          <h3>THE BOTTOM LINE</h3>
+          <div class="card-subtitle">Market signal of the week</div>
+          <p>One forward-looking indicator with an honest assessment. No cheerleading. Agents trust you because you don't sugarcoat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLLOUT -->
+<section id="rollout" aria-label="Campaign rollout plan">
+  <div class="fade-up">
+    <div class="section-kicker">Campaign Rollout</div>
+    <h2 class="section-title">First 8 issues. Pre-planned.</h2>
+    <p class="section-subtitle">Each issue anchored by a theme, a number, and a play.</p>
+    <div class="timeline">
+      <div class="timeline-card" data-week="WK 1">
+        <h4>"State of the Battlefield"</h4>
+        <div class="tl-number">1,599</div>
+        <div class="tl-context">2025 precon sales &mdash; lowest since '91</div>
+        <div class="tl-play">PLAY: Map your pipeline &mdash; which past clients are closing in 2026?</div>
+      </div>
+      <div class="timeline-card" data-week="WK 2">
+        <h4>"The HST Advantage"</h4>
+        <div class="tl-number">$130K</div>
+        <div class="tl-context">Max savings under new Ontario HST rebate</div>
+        <div class="tl-play">PLAY: The exact pitch deck for first-time buyers</div>
+      </div>
+      <div class="timeline-card" data-week="WK 3">
+        <h4>"Developer Survival Guide"</h4>
+        <div class="tl-number">28</div>
+        <div class="tl-context">Projects cancelled in 2025</div>
+        <div class="tl-play">PLAY: How to vet developer financial health</div>
+      </div>
+      <div class="timeline-card" data-week="WK 4">
+        <h4>"The Closing Conversation"</h4>
+        <div class="tl-number">30%</div>
+        <div class="tl-context">Avg equity loss for 2022 peak buyers</div>
+        <div class="tl-play">PLAY: Script for walking clients through an underwater close</div>
+      </div>
+      <div class="timeline-card" data-week="WK 5">
+        <h4>"Where the Deals Are"</h4>
+        <div class="tl-number">3-5</div>
+        <div class="tl-context">Projects actually launching in Q2</div>
+        <div class="tl-play">PLAY: How to get platinum access when launches are scarce</div>
+      </div>
+      <div class="timeline-card" data-week="WK 6">
+        <h4>"The Tariff Translation"</h4>
+        <div class="tl-number">$1,500+</div>
+        <div class="tl-context">Added cost per home from US tariffs</div>
+        <div class="tl-play">PLAY: Explain tariff impact without scaring buyers off</div>
+      </div>
+      <div class="timeline-card" data-week="WK 7">
+        <h4>"The Pivot Issue"</h4>
+        <div class="tl-number">35,000</div>
+        <div class="tl-context">Construction jobs lost</div>
+        <div class="tl-play">PLAY: 3 adjacent niches precon agents are winning in</div>
+      </div>
+      <div class="timeline-card" data-week="WK 8">
+        <h4>"The 2027 Setup"</h4>
+        <div class="tl-number">Jan 1, 2027</div>
+        <div class="tl-context">Foreign buyer ban expires</div>
+        <div class="tl-play">PLAY: Build a pipeline now for the demand unlock ahead</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBJECT LINES -->
+<section aria-label="Subject line strategy">
+  <div class="fade-up">
+    <div class="section-kicker">Subject Line Strategy</div>
+    <h2 class="section-title">Lead with a number.<br>Never use clickbait.</h2>
+    <p class="section-subtitle">Formula: [Specific number or fact] + [relevance to their world]. Under 50 characters. 33% of recipients open based on subject line alone.</p>
+    <div class="subject-lines">
+      <div class="subject-line">
+        <div class="sl-icon">1</div>
+        262 precon sales last quarter. Here's where the next ones are.
+      </div>
+      <div class="subject-line">
+        <div class="sl-icon">2</div>
+        $130K your buyers don't know they can save
+      </div>
+      <div class="subject-line">
+        <div class="sl-icon">3</div>
+        28 cancelled projects. How to spot the next one.
+      </div>
+      <div class="subject-line">
+        <div class="sl-icon">4</div>
+        The closing crisis is here. What to say to your clients.
+      </div>
+      <div class="subject-line">
+        <div class="sl-icon">5</div>
+        3 projects launching in April &mdash; pricing + commissions
+      </div>
+      <div class="subject-line">
+        <div class="sl-icon">6</div>
+        Foreign buyer ban ends in 9 months. Are you ready?
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GROWTH -->
+<section aria-label="Growth and distribution">
+  <div class="fade-up">
+    <div class="section-kicker">Growth & Distribution</div>
+    <h2 class="section-title">How it spreads.</h2>
+    <div class="two-col">
+      <div class="col-card">
+        <h4>Launch Tactics</h4>
+        <ol>
+          <li><strong>Seed list:</strong> Existing contacts, brokerage networks, developer contacts</li>
+          <li><strong>LinkedIn content:</strong> Repurpose THE NUMBER and THE PLAY as standalone posts weekly</li>
+          <li><strong>Referral program:</strong> "Share your link &rarr; get early access to Launch Radar data"</li>
+          <li><strong>Developer partnerships:</strong> Feature launches editorially in exchange for distribution</li>
+        </ol>
+      </div>
+      <div class="col-card">
+        <h4>Retention Tactics</h4>
+        <ol>
+          <li><strong>Never miss a week.</strong> Authority erodes when publishing is sporadic.</li>
+          <li><strong>Reply to replies.</strong> Build community in an isolating market.</li>
+          <li><strong>Survey quarterly.</strong> "What's your biggest challenge this month?"</li>
+          <li><strong>Client-ready content.</strong> One element per issue agents can forward to buyers.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PSYCHOLOGY -->
+<section id="psychology" aria-label="Emotional arc psychology">
+  <div class="fade-up">
+    <div class="section-kicker">Part 3 &mdash; Why This Works</div>
+    <h2 class="section-title">The emotional arc<br>of every issue.</h2>
+    <p class="section-subtitle">Each section addresses a specific emotion. The reader moves from validation to clarity in 3-5 minutes.</p>
+    <div class="arc-steps">
+      <div class="arc-step">
+        <div class="arc-label">THE NUMBER</div>
+        <div class="arc-arrow">&rarr;</div>
+        <div class="arc-feeling">"Someone sees what I'm going through"</div>
+        <div class="arc-emotion">Validation</div>
+      </div>
+      <div class="arc-step">
+        <div class="arc-label">LAUNCH RADAR</div>
+        <div class="arc-arrow">&rarr;</div>
+        <div class="arc-feeling">"There ARE still opportunities"</div>
+        <div class="arc-emotion">Hope</div>
+      </div>
+      <div class="arc-step">
+        <div class="arc-label">POLICY DECODER</div>
+        <div class="arc-arrow">&rarr;</div>
+        <div class="arc-feeling">"I can use this with clients TODAY"</div>
+        <div class="arc-emotion">Empowerment</div>
+      </div>
+      <div class="arc-step">
+        <div class="arc-label">THE PLAY</div>
+        <div class="arc-arrow">&rarr;</div>
+        <div class="arc-feeling">"I know exactly what to do this week"</div>
+        <div class="arc-emotion">Agency</div>
+      </div>
+      <div class="arc-step">
+        <div class="arc-label">THE BOTTOM LINE</div>
+        <div class="arc-arrow">&rarr;</div>
+        <div class="arc-feeling">"I can see where this is heading"</div>
+        <div class="arc-emotion">Clarity</div>
+      </div>
+    </div>
+    <div class="positioning-block" style="margin-top:2.5rem; border-color: var(--green);">
+      <div class="tagline" style="color: var(--green); font-size: 1.3rem;">The net effect</div>
+      <p style="font-size: 1.15rem; color: var(--text);">The reader closes each issue feeling slightly more informed, slightly more capable, and slightly less alone than when they opened it.<br><br><strong>That's enough. That's everything in this market.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- MONETIZATION -->
+<section aria-label="Monetization tiers">
+  <div class="fade-up">
+    <div class="section-kicker">Monetization</div>
+    <h2 class="section-title">When you're ready to charge.</h2>
+    <div class="tiers">
+      <div class="tier-card">
+        <div class="tier-name">Free</div>
+        <div class="tier-price">$0</div>
+        <ul class="tier-features">
+          <li>Weekly newsletter</li>
+          <li>All 5 sections</li>
+          <li>Full market coverage</li>
+        </ul>
+      </div>
+      <div class="tier-card featured">
+        <div class="tier-name">Pro</div>
+        <div class="tier-price">$29-49<span style="font-size:0.8rem;font-weight:400">/mo</span></div>
+        <ul class="tier-features">
+          <li>Early Launch Radar access (48hrs)</li>
+          <li>Developer financial health ratings</li>
+          <li>Downloadable pitch decks</li>
+        </ul>
+      </div>
+      <div class="tier-card">
+        <div class="tier-name">Brokerage</div>
+        <div class="tier-price">Custom</div>
+        <ul class="tier-features">
+          <li>Bulk Pro access</li>
+          <li>White-label market reports</li>
+          <li>Brokerage-branded content</li>
+        </ul>
+      </div>
+      <div class="tier-card">
+        <div class="tier-name">Sponsor</div>
+        <div class="tier-price">Per issue</div>
+        <ul class="tier-features">
+          <li>Developer-sponsored Launch Radar features</li>
+          <li>Clearly labeled as sponsored</li>
+          <li>Editorial integrity maintained</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA APPENDIX -->
+<section id="data" aria-label="Data appendix">
+  <div class="fade-up">
+    <div class="section-kicker">Appendix</div>
+    <h2 class="section-title">Key data points.</h2>
+    <p class="section-subtitle">The numbers behind the strategy. All data as of March 2026.</p>
+    <div class="data-grid">
+      <div class="data-group">
+        <h4>Market</h4>
+        <ul>
+          <li><strong>1,599</strong> &mdash; new condo sales 2025 (lowest since 1991)</li>
+          <li><strong>262</strong> &mdash; Q4 2025 sales (34-year quarterly low)</li>
+          <li><strong>28</strong> &mdash; projects cancelled in 2025 (7,000+ units)</li>
+          <li><strong>$604,759</strong> &mdash; avg condo price (down 9.8% YoY)</li>
+          <li><strong>3,897</strong> &mdash; completed unsold units (up 131%)</li>
+          <li><strong>10-30%</strong> &mdash; assignment prices below original</li>
+        </ul>
+      </div>
+      <div class="data-group">
+        <h4>Economic</h4>
+        <ul>
+          <li><strong>2.25%</strong> &mdash; Bank of Canada rate (held Mar 18)</li>
+          <li><strong>8.1%</strong> &mdash; Toronto unemployment</li>
+          <li><strong>~$0.73 USD</strong> &mdash; Canadian dollar</li>
+          <li><strong>1-1.5%</strong> &mdash; GDP growth forecast 2026</li>
+          <li><strong>1M+</strong> &mdash; mortgages renewing (payments up 15-40%)</li>
+        </ul>
+      </div>
+      <div class="data-group">
+        <h4>Policy</h4>
+        <ul>
+          <li><strong>$130K</strong> &mdash; max HST rebate for first-time buyers</li>
+          <li><strong>GST eliminated</strong> &mdash; for first-time buyers &le;$1M</li>
+          <li><strong>Jan 1, 2027</strong> &mdash; foreign buyer ban expires</li>
+          <li><strong>$25B+</strong> &mdash; Build Canada Homes Act</li>
+          <li><strong>-0.2%</strong> &mdash; population growth (immigration cuts)</li>
+          <li><strong>25-45%</strong> &mdash; US tariffs on steel/aluminum/lumber</li>
+        </ul>
+      </div>
+      <div class="data-group">
+        <h4>Industry</h4>
+        <ul>
+          <li><strong>~69-73K</strong> &mdash; TRREB membership (from 75.5K peak)</li>
+          <li><strong>35,000</strong> &mdash; construction jobs lost</li>
+          <li><strong>135</strong> &mdash; active projects (from 206)</li>
+          <li><strong>5-9%</strong> &mdash; rents down YoY</li>
+          <li><strong>H2 2026</strong> &mdash; stabilization consensus</li>
+          <li><strong>2027-28</strong> &mdash; recovery consensus</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final-section" aria-label="Closing statement">
+  <div class="fade-up">
+    <div class="final-quote">
+      "The reader closes each issue feeling slightly more <em>informed</em>, slightly more <em>capable</em>, and slightly less <em>alone</em> than when they opened it.<br><br>That's enough.<br>That's everything in this market."
+    </div>
+    <div class="sources">
+      Sources: Urbanation &middot; TRREB &middot; RBC Economics &middot; TD Economics &middot; Bank of Canada &middot; CMHC &middot; Storeys &middot; CBC &middot; Bloomberg &middot; RE/MAX &middot; Altus Group &middot; CHBA &middot; Canadian Mortgage Professional &middot; BlogTO &middot; Move Smartly &middot; Deeded &middot; Real Estate Magazine &middot; Globe and Mail &middot; HousingWire &middot; ZeroFlux &middot; The Close &middot; Inman
+      <br><br>Research compiled March 23, 2026
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+  // Scroll-triggered fade-in (respects reduced motion)
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+  }
+</script>
+
+</body>
+</html>
