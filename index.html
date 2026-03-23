@@ -666,6 +666,98 @@
     color: var(--text);
   }
 
+  .data-takeaway {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 77, 77, 0.08);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.85rem;
+    color: var(--text);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* Sample Newsletters */
+  .sample-newsletter {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  .sample-header {
+    background: var(--surface-2);
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  .sample-badge {
+    background: var(--accent-3);
+    color: var(--bg);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 100px;
+    flex-shrink: 0;
+  }
+
+  .sample-subject {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .sample-body {
+    padding: 2rem;
+  }
+
+  .sample-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sample-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .sample-section-label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .sample-section-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+  }
+
+  .sample-section-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .sample-section-content strong {
+    color: var(--text);
+  }
+
+  @media (max-width: 768px) {
+    .sample-body { padding: 1.25rem; }
+    .sample-header { padding: 1rem 1.25rem; }
+  }
+
   /* Final CTA */
   .final-section {
     text-align: center;
@@ -1327,6 +1419,7 @@
     <li><a href="#distribution">Distribution</a></li>
     <li><a href="#kpis">KPIs</a></li>
     <li><a href="#techstack">Tech Stack</a></li>
+    <li><a href="#business-model">Business</a></li>
     <li><a href="#psychology">Psychology</a></li>
     <li><a href="#data">Data</a></li>
   </ul>
@@ -1501,6 +1594,44 @@
         <h3>Guarded Optimism</h3>
         <div class="quote">"There are some signals..."</div>
         <p>Rates at 2.25%. HST rebate worth $130K. Foreign buyer ban expiring Jan 2027. Supply correction underway. The signals are real &mdash; but they've been burned before.</p>
+      </div>
+    </div>
+
+    <!-- Personality Frameworks -->
+    <div class="chart-section" style="margin-top: 2rem;">
+      <h3 class="chart-title">Personality Frameworks &mdash; Who We're Talking To</h3>
+      <div class="emotions-grid" style="margin-top: 1rem;">
+        <div class="emotion-card" style="border-color: var(--blue);">
+          <div class="rank">DISC PROFILE</div>
+          <h3>High D / High I</h3>
+          <div class="quote">The Driven Connector</div>
+          <p>Precon realtors skew heavily Dominant (results-oriented, competitive, direct) and Influential (relationship-driven, persuasive, optimistic). In a downturn, High-D types become impatient and aggressive &mdash; they want action, not analysis. High-I types lose their energy source (social proof, events, deal flow).</p>
+          <p style="margin-top: 0.5rem; color: var(--blue);"><strong>Content implication:</strong> Lead with data and directives, not feelings. Give them plays to run, not empathy essays.</p>
+        </div>
+        <div class="emotion-card" style="border-color: var(--accent-3);">
+          <div class="rank">MASLOW'S HIERARCHY</div>
+          <h3>Dropped to Safety</h3>
+          <div class="quote">From self-actualization to survival</div>
+          <p>In the boom, precon agents operated at Esteem/Self-Actualization &mdash; status, recognition, luxury. The downturn has dropped them to Safety (financial security, job stability) and even Belonging (community erosion as peers leave). Content must meet them where they are now, not where they were.</p>
+          <p style="margin-top: 0.5rem; color: var(--accent-3);"><strong>Content implication:</strong> Address safety first (income opportunities, cost management), then rebuild belonging (community, shared identity).</p>
+        </div>
+        <div class="emotion-card" style="border-color: var(--green);">
+          <div class="rank">STAGES OF GRIEF</div>
+          <h3>Between Anger &amp; Bargaining</h3>
+          <div class="quote">The market they built their career on is gone</div>
+          <p>Many precon agents are grieving a lost identity. The stages map clearly: Denial (2023 &mdash; "it'll bounce back"), Anger (2024 &mdash; "developers are failing us"), Bargaining (now &mdash; "if I pivot to resale..."), with Depression and Acceptance still ahead for some.</p>
+          <p style="margin-top: 0.5rem; color: var(--green);"><strong>Content implication:</strong> Don't skip ahead to Acceptance. Meet them in Bargaining &mdash; give them concrete pivots and alternatives that validate their instinct to adapt.</p>
+        </div>
+        <div class="emotion-card" style="border-color: var(--purple);">
+          <div class="rank">JOBS TO BE DONE</div>
+          <h3>Four Core Jobs</h3>
+          <div class="quote">What they're hiring content to do</div>
+          <p><strong>1. Find deals</strong> &mdash; "Help me find something to sell"<br>
+             <strong>2. Manage risk</strong> &mdash; "Help me avoid selling a project that cancels"<br>
+             <strong>3. Stay relevant</strong> &mdash; "Help me prove my value to clients"<br>
+             <strong>4. Plan an exit (or a pivot)</strong> &mdash; "Help me figure out what's next"</p>
+          <p style="margin-top: 0.5rem; color: var(--purple);"><strong>Content implication:</strong> Every issue should serve at least 2 of these 4 jobs. Launch Radar = Job 1. Developer vetting = Job 2. Policy Decoder = Job 3. The Play = Job 4.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1689,6 +1820,70 @@
   </div>
 </section>
 
+<!-- COMPETITIVE LANDSCAPE -->
+<section id="competitive" aria-label="Competitive landscape">
+  <div class="fade-up">
+    <div class="section-kicker">Competitive Landscape</div>
+    <h2 class="section-title">Who else is talking<br>to these agents.</h2>
+    <p class="section-subtitle">Several content brands cover GTA real estate. None own the niche we're targeting: operational, precon-specific intelligence for working agents.</p>
+    <table class="needs-table">
+      <thead>
+        <tr>
+          <th style="width:auto; text-align:left;">Player</th>
+          <th>What They Do</th>
+          <th>Gap / Limitation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-size:0.95rem; width:auto; text-align:left;">Urbanation</td>
+          <td>Premium research reports on GTA condo market. Industry-standard data. Subscription ~$5K-10K+/yr.</td>
+          <td>Institutional audience. Too expensive for individual agents. Reports, not actionable plays.</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.95rem; width:auto; text-align:left;">Storeys</td>
+          <td>National real estate news (Toronto + Vancouver focus). Daily articles, newsletter, strong brand.</td>
+          <td>Broad audience (buyers, sellers, industry). Not precon-specific. News coverage, not agent tactics.</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.95rem; width:auto; text-align:left;">BuzzBuzzHome / Livabl</td>
+          <td>New construction listings platform. Acquired by US-based Zonda. Consumer-facing search tool.</td>
+          <td>Listing aggregator, not editorial. No market analysis or agent-facing strategy content.</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.95rem; width:auto; text-align:left;">BlogTO Real Estate</td>
+          <td>Consumer-facing Toronto lifestyle + real estate content. High traffic, SEO-driven.</td>
+          <td>Written for buyers/renters, not agents. Clickbait-adjacent. Zero industry depth.</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.95rem; width:auto; text-align:left;">Wahi</td>
+          <td>Housing market reports, neighbourhood data, buyer tools. Regular GTA Market Pulse newsletters.</td>
+          <td>Consumer-first platform. Market snapshots, not precon-specific. No agent workflow content.</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.95rem; width:auto; text-align:left;">Precondo.ca</td>
+          <td>Precon project listings + historical price data. SEO-strong for "pre-construction Toronto."</td>
+          <td>Listings and data tables. No editorial voice, no strategy, no community.</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.95rem; width:auto; text-align:left;">Move Smartly (Realosophy)</td>
+          <td>Data-driven market commentary from John Pasalis. Respected, analytical, contrarian voice.</td>
+          <td>Resale-focused. One voice, infrequent publishing. Not precon-specific.</td>
+        </tr>
+        <tr>
+          <td style="font-size:0.95rem; width:auto; text-align:left;">TRREB Market Reports</td>
+          <td>Official monthly/quarterly MLS data releases. The baseline everyone references.</td>
+          <td>Raw data, no interpretation. Resale-heavy. No precon launch intel or agent plays.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="positioning-block" style="margin-top:2rem; border-color: var(--accent-3);">
+      <div class="tagline" style="color: var(--accent-3); font-size: 1.3rem;">The White Space</div>
+      <p>Nobody is writing a weekly, precon-specific, agent-facing newsletter that combines launch intelligence + policy translation + tactical plays + honest market signals. That is the gap. Urbanation has the data but charges institutional prices. Storeys has the brand but writes for consumers. TRREB has the authority but publishes raw stats. We combine the best of all three &mdash; at inbox speed, in agent language, for free.</p>
+    </div>
+  </div>
+</section>
+
 <!-- THE TEMPLATE -->
 <section id="template" aria-label="Newsletter template">
   <div class="fade-up">
@@ -1798,6 +1993,12 @@
         <div class="tl-context">Foreign buyer ban expires</div>
         <div class="tl-play">PLAY: Build a pipeline now for the demand unlock ahead</div>
       </div>
+      <div class="timeline-card" data-week="LAUNCH" style="border-color: var(--accent); background: linear-gradient(135deg, #1a0a0a 0%, var(--surface) 100%);">
+        <h4>"The Platform Is Here"</h4>
+        <div class="tl-number" style="color: var(--accent);">NEW</div>
+        <div class="tl-context">Sales platform launch announcement &mdash; dedicated issue</div>
+        <div class="tl-play">PLAY: Exclusive early access for subscribers &mdash; drive signups to the platform with a subscriber-only perk</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1832,6 +2033,147 @@
       <div class="subject-line">
         <div class="sl-icon">6</div>
         Foreign buyer ban ends in 9 months. Are you ready?
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE NEWSLETTERS -->
+<section id="samples" aria-label="Sample newsletter editions">
+  <div class="fade-up">
+    <div class="section-kicker">Ready to Send</div>
+    <h2 class="section-title">Three sample issues.<br>Written and ready.</h2>
+    <p class="section-subtitle">Full drafts your team can review, edit, and ship. Each follows the 5-section template.</p>
+
+    <!-- SAMPLE 1: Issue #1 -->
+    <div class="sample-newsletter">
+      <div class="sample-header">
+        <div class="sample-badge">ISSUE #1</div>
+        <div class="sample-subject">Subject: 1,599 precon sales in 2025. Here's where the next ones are.</div>
+      </div>
+      <div class="sample-body">
+        <div class="sample-section">
+          <div class="sample-section-label">THE NUMBER</div>
+          <div class="sample-section-content">
+            <strong style="font-size: 2rem; color: var(--accent);">1,599</strong>
+            <p>That's how many new condos sold across the GTA in all of 2025. The lowest since 1991. Down 95% from the 2021 peak.</p>
+            <p>If you're still in this game, you already know what that number feels like. But here's what matters more: <strong>where the next sales are coming from.</strong></p>
+          </div>
+        </div>
+        <div class="sample-section">
+          <div class="sample-section-label">LAUNCH RADAR</div>
+          <div class="sample-section-content">
+            <p><strong>3 projects showing signs of life for Q2 2026:</strong></p>
+            <p>&bull; <strong>[Developer A] &mdash; Midtown Toronto</strong> &mdash; 280 units, est. late April. $1,150-$1,250 PSF. 4/4 past projects on time. Commission: 4%. <span style="color: var(--green);">LOW RISK</span></p>
+            <p>&bull; <strong>[Developer B] &mdash; Scarborough Town Centre</strong> &mdash; 420 units, May. $950-$1,050 PSF. Extended deposits (5/5/5). Commission: 3.5%. <span style="color: var(--accent-3);">MODERATE RISK</span></p>
+            <p>&bull; <strong>[Developer C] &mdash; Vaughan Metropolitan Centre</strong> &mdash; 350 units, TBD. Strong balance sheet, delayed 2 past projects. Commission: 4%. <span style="color: var(--accent-3);">MODERATE RISK</span></p>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;"><em>[Replace with real projects before sending.]</em></p>
+          </div>
+        </div>
+        <div class="sample-section">
+          <div class="sample-section-label">POLICY DECODER</div>
+          <div class="sample-section-content">
+            <p><strong>The Ontario HST Rebate &mdash; your new best sales tool.</strong></p>
+            <p>Since October 2025, first-time buyers get the full 8% provincial HST rebated on new homes up to $1M. Combined with the federal GST rebate, your buyer saves up to <strong>$130,000</strong>.</p>
+            <p><strong>The 30-second pitch:</strong> <em>"That $750K precon unit? The government is effectively writing your buyer a cheque for $97,500 at closing. This incentive didn't exist a year ago."</em></p>
+          </div>
+        </div>
+        <div class="sample-section">
+          <div class="sample-section-label">THE PLAY</div>
+          <div class="sample-section-content">
+            <p><strong>This week: Map your closing pipeline.</strong></p>
+            <p>Open your CRM. Pull every client who bought precon in 2022-2024. Sort by closing date. The ones closing in 6 months are about to get a letter from the developer &mdash; and they'll be scared. <strong>Call them first.</strong></p>
+            <p>Script: <em>"Hi [name], your unit at [project] is coming up for closing. I want to make sure you know where the market is and what your options are. Can we grab 15 minutes this week?"</em></p>
+          </div>
+        </div>
+        <div class="sample-section">
+          <div class="sample-section-label">THE BOTTOM LINE</div>
+          <div class="sample-section-content">
+            <p><strong>Signal: Completions are about to drop off a cliff.</strong></p>
+            <p>~29K units in 2025 &rarr; ~22K in 2026 &rarr; ~14K in 2027. The cancelled projects were supposed to deliver in 2028-2029. They won't. When immigration reopens in 2027, there won't be enough product.</p>
+            <p><strong>The agents who survive this downturn will own the next cycle.</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAMPLE 2: Platform Launch Issue -->
+    <div class="sample-newsletter" style="border-color: var(--accent);">
+      <div class="sample-header" style="background: linear-gradient(135deg, #1a0a0a 0%, var(--surface) 100%);">
+        <div class="sample-badge" style="background: var(--accent);">PLATFORM LAUNCH</div>
+        <div class="sample-subject">Subject: We built something. Early access for subscribers only.</div>
+      </div>
+      <div class="sample-body">
+        <div class="sample-section">
+          <div class="sample-section-label">THE NUMBER</div>
+          <div class="sample-section-content">
+            <strong style="font-size: 2rem; color: var(--accent);">0 &rarr; 1</strong>
+            <p>For months we've been sending you the data. The launches. The plays. Today we're putting it all in one place.</p>
+            <p><strong>We're launching [Platform Name] &mdash; a sales platform built specifically for precon realtors.</strong></p>
+          </div>
+        </div>
+        <div class="sample-section">
+          <div class="sample-section-label">WHAT IT IS</div>
+          <div class="sample-section-content">
+            <p>&bull; <strong>Live Launch Radar</strong> &mdash; every active precon project, updated daily. Pricing, deposits, commissions, developer ratings.</p>
+            <p>&bull; <strong>Developer Scorecards</strong> &mdash; financial health, delivery track record, cancellation history.</p>
+            <p>&bull; <strong>Client-Ready Materials</strong> &mdash; white-label pitch decks, comparison sheets, policy explainers.</p>
+            <p>&bull; <strong>Closing Crisis Toolkit</strong> &mdash; assignment calculators, negotiation scripts, lender contacts.</p>
+            <p style="color: var(--text-muted); font-size: 0.8rem;"><em>[Customize to match your actual platform.]</em></p>
+          </div>
+        </div>
+        <div class="sample-section">
+          <div class="sample-section-label">THE PLAY</div>
+          <div class="sample-section-content">
+            <p><strong>Newsletter subscribers get early access.</strong> Free for 30 days before public launch. No credit card.</p>
+            <p><strong>[Link to platform &mdash; subscriber-only code: PRECON2026]</strong></p>
+          </div>
+        </div>
+        <div class="sample-section">
+          <div class="sample-section-label">THE BOTTOM LINE</div>
+          <div class="sample-section-content">
+            <p>We built this because the newsletter wasn't enough. You told us you needed a daily tool, not just a weekly read.</p>
+            <p><strong>The precon market will come back. The question is whether you'll be positioned when it does.</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAMPLE 3: Tariff Issue -->
+    <div class="sample-newsletter">
+      <div class="sample-header">
+        <div class="sample-badge">ISSUE #6</div>
+        <div class="sample-subject">Subject: $1,500 per home. That's what tariffs cost your buyers now.</div>
+      </div>
+      <div class="sample-body">
+        <div class="sample-section">
+          <div class="sample-section-label">THE NUMBER</div>
+          <div class="sample-section-content">
+            <strong style="font-size: 2rem; color: var(--accent);">$1,500+</strong>
+            <p>Additional cost per home from US tariffs on steel (25%), aluminum (25%), and lumber (45%). Roughly 40% of HVAC equipment in GTA high-rises is US-imported.</p>
+          </div>
+        </div>
+        <div class="sample-section">
+          <div class="sample-section-label">POLICY DECODER</div>
+          <div class="sample-section-content">
+            <p><strong>Plain English:</strong> Trump imposed 25% on Canadian imports (Feb 2025). Steel/aluminum (March), autos (April). Supreme Court struck some down Feb 2026, but steel, aluminum, and lumber tariffs stay.</p>
+            <p><strong>Buyer script:</strong> <em>"Tariffs are adding $1,500-$3,000 per unit. But that cost is locked in at today's prices. If you wait and tariffs go higher, the next pricing round will be worse. Buying now protects you."</em></p>
+          </div>
+        </div>
+        <div class="sample-section">
+          <div class="sample-section-label">THE PLAY</div>
+          <div class="sample-section-content">
+            <p><strong>Use tariffs as urgency, not fear.</strong> Send to 5 fence-sitters this week:</p>
+            <p><em>"Hi [name] &mdash; US tariffs are adding $1,500-$3,000/unit to construction costs. Projects available now were priced before the full impact. Developers launching later this year will bake it in. Worth considering as you think about timing."</em></p>
+          </div>
+        </div>
+        <div class="sample-section">
+          <div class="sample-section-label">THE BOTTOM LINE</div>
+          <div class="sample-section-content">
+            <p>Developers are absorbing tariff costs for now because demand is too fragile. That math doesn't last. Projects launching late 2026+ will have tariffs baked in.</p>
+            <p><strong>Current pricing is as tariff-insulated as it's going to get.</strong></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1910,52 +2252,6 @@
   </div>
 </section>
 
-<!-- MONETIZATION -->
-<section aria-label="Monetization tiers">
-  <div class="fade-up">
-    <div class="section-kicker">Monetization</div>
-    <h2 class="section-title">When you're ready to charge.</h2>
-    <div class="tiers">
-      <div class="tier-card">
-        <div class="tier-name">Free</div>
-        <div class="tier-price">$0</div>
-        <ul class="tier-features">
-          <li>Weekly newsletter</li>
-          <li>All 5 sections</li>
-          <li>Full market coverage</li>
-        </ul>
-      </div>
-      <div class="tier-card featured">
-        <div class="tier-name">Pro</div>
-        <div class="tier-price">$29-49<span style="font-size:0.8rem;font-weight:400">/mo</span></div>
-        <ul class="tier-features">
-          <li>Early Launch Radar access (48hrs)</li>
-          <li>Developer financial health ratings</li>
-          <li>Downloadable pitch decks</li>
-        </ul>
-      </div>
-      <div class="tier-card">
-        <div class="tier-name">Brokerage</div>
-        <div class="tier-price">Custom</div>
-        <ul class="tier-features">
-          <li>Bulk Pro access</li>
-          <li>White-label market reports</li>
-          <li>Brokerage-branded content</li>
-        </ul>
-      </div>
-      <div class="tier-card">
-        <div class="tier-name">Sponsor</div>
-        <div class="tier-price">Per issue</div>
-        <ul class="tier-features">
-          <li>Developer-sponsored Launch Radar features</li>
-          <li>Clearly labeled as sponsored</li>
-          <li>Editorial integrity maintained</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- DATA APPENDIX -->
 <section id="data" aria-label="Data appendix">
   <div class="fade-up">
@@ -1973,6 +2269,7 @@
           <li><strong>3,897</strong> &mdash; completed unsold units (up 131%)</li>
           <li><strong>10-30%</strong> &mdash; assignment prices below original</li>
         </ul>
+        <div class="data-takeaway">The precon market has effectively frozen. There is almost nothing to sell, and what exists is losing value. This is the worst environment in 34 years.</div>
       </div>
       <div class="data-group">
         <h4>Economic</h4>
@@ -1983,6 +2280,7 @@
           <li><strong>1-1.5%</strong> &mdash; GDP growth forecast 2026</li>
           <li><strong>1M+</strong> &mdash; mortgages renewing (payments up 15-40%)</li>
         </ul>
+        <div class="data-takeaway">Rates are down but the economy isn't recovering fast enough. High unemployment and a massive mortgage renewal wave mean buyers remain cautious and overleveraged.</div>
       </div>
       <div class="data-group">
         <h4>Policy</h4>
@@ -1994,6 +2292,7 @@
           <li><strong>-0.2%</strong> &mdash; population growth (immigration cuts)</li>
           <li><strong>25-45%</strong> &mdash; US tariffs on steel/aluminum/lumber</li>
         </ul>
+        <div class="data-takeaway">Government is throwing everything at housing &mdash; tax relief, supply funding, buyer incentives. These are real sales tools for agents, but immigration cuts remove the demand engine that powered the last cycle.</div>
       </div>
       <div class="data-group">
         <h4>Industry</h4>
@@ -2005,6 +2304,7 @@
           <li><strong>H2 2026</strong> &mdash; stabilization consensus</li>
           <li><strong>2027-28</strong> &mdash; recovery consensus</li>
         </ul>
+        <div class="data-takeaway">The industry is shrinking fast &mdash; fewer agents, fewer projects, fewer jobs. But that's also the setup: the agents who survive this contraction will face far less competition when the market turns.</div>
       </div>
     </div>
   </div>
