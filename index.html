@@ -95,7 +95,7 @@
   section {
     min-height: 100vh;
     /* scroll-snap disabled */
-    padding: 100px 2rem 4rem;
+    padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -678,71 +678,92 @@
     line-height: 1.5;
   }
 
-  /* Sample Newsletters */
+  /* Sample Newsletters — Plaintext Email Style */
   .sample-newsletter {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    margin-bottom: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
     overflow: hidden;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
   }
 
   .sample-header {
-    background: var(--surface-2);
-    padding: 1.25rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid var(--border);
-    flex-wrap: wrap;
+    background: #f5f5f5;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .sample-email-meta {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.8;
+  }
+
+  .sample-email-meta strong {
+    color: #333;
+    display: inline-block;
+    min-width: 50px;
   }
 
   .sample-badge {
-    background: var(--accent-3);
-    color: var(--bg);
-    font-size: 0.65rem;
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 0.6rem;
     font-weight: 800;
     letter-spacing: 0.1em;
-    padding: 0.3rem 0.75rem;
-    border-radius: 100px;
-    flex-shrink: 0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
   }
 
   .sample-subject {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text);
+    display: none;
   }
 
   .sample-body {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #222;
   }
 
   .sample-section {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .sample-section:last-child {
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
     padding-bottom: 0;
     border-bottom: none;
   }
 
+  .sample-section:last-child {
+    margin-bottom: 0;
+  }
+
   .sample-section-label {
-    font-size: 0.65rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.7rem;
     font-weight: 800;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
+    letter-spacing: 0.12em;
+    color: #999;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+  }
+
+  .sample-section-content {
+    color: #333;
   }
 
   .sample-section-content p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.7;
-    margin-bottom: 0.5rem;
+    color: #333;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
   }
 
   .sample-section-content p:last-child {
@@ -750,12 +771,34 @@
   }
 
   .sample-section-content strong {
-    color: var(--text);
+    color: #111;
+  }
+
+  .sample-section-content em {
+    color: #555;
+  }
+
+  .sample-divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 1.5rem 0;
+  }
+
+  .sample-footer {
+    padding: 1rem 1.5rem;
+    background: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.75rem;
+    color: #999;
+    text-align: center;
+    line-height: 1.6;
   }
 
   @media (max-width: 768px) {
-    .sample-body { padding: 1.25rem; }
-    .sample-header { padding: 1rem 1.25rem; }
+    .sample-body { padding: 1.25rem 1rem; }
+    .sample-header { padding: 0.75rem 1rem; }
+    .sample-newsletter { border-radius: 0; }
   }
 
   /* Final CTA */
@@ -1401,30 +1444,6 @@
 
 <a href="#main-content" class="skip-link" style="position:absolute;top:-100%;left:0;background:var(--accent);color:#fff;padding:0.75rem 1.5rem;z-index:10000;font-weight:600;font-size:0.9rem;text-decoration:none;border-radius:0 0 8px 0;" onfocus="this.style.top='0'" onblur="this.style.top='-100%'">Skip to content</a>
 
-<nav role="navigation" aria-label="Main navigation">
-  <div class="logo">PCF Newsletter Strategy</div>
-  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <ul class="nav-links" id="nav-links" role="list">
-    <li><a href="#profile">Profile</a></li>
-    <li><a href="#needs">Needs</a></li>
-    <li><a href="#strategy">Strategy</a></li>
-    <li><a href="#competitive">Landscape</a></li>
-    <li><a href="#template">Template</a></li>
-    <li><a href="#sourcing">Sourcing</a></li>
-    <li><a href="#rollout">Rollout</a></li>
-    <li><a href="#distribution">Distribution</a></li>
-    <li><a href="#kpis">KPIs</a></li>
-    <li><a href="#techstack">Tech Stack</a></li>
-    <li><a href="#business-model">Business</a></li>
-    <li><a href="#psychology">Psychology</a></li>
-    <li><a href="#data">Data</a></li>
-  </ul>
-</nav>
-
 <!-- HERO -->
 <main id="main-content">
 <section class="hero" id="hero" aria-label="Hero introduction">
@@ -2048,132 +2067,116 @@
     <!-- SAMPLE 1: Issue #1 -->
     <div class="sample-newsletter">
       <div class="sample-header">
-        <div class="sample-badge">ISSUE #1</div>
-        <div class="sample-subject">Subject: 1,599 precon sales in 2025. Here's where the next ones are.</div>
+        <div class="sample-email-meta">
+          <strong>From:</strong> The Precon Brief &lt;hello@preconbrief.com&gt;<br>
+          <strong>To:</strong> you<br>
+          <strong>Subject:</strong> 1,599 precon sales in 2025. Here's where the next ones are.
+        </div>
       </div>
       <div class="sample-body">
-        <div class="sample-section">
-          <div class="sample-section-label">THE NUMBER</div>
-          <div class="sample-section-content">
-            <strong style="font-size: 2rem; color: var(--accent);">1,599</strong>
-            <p>That's how many new condos sold across the GTA in all of 2025. The lowest since 1991. Down 95% from the 2021 peak.</p>
-            <p>If you're still in this game, you already know what that number feels like. But here's what matters more: <strong>where the next sales are coming from.</strong></p>
-          </div>
-        </div>
-        <div class="sample-section">
-          <div class="sample-section-label">LAUNCH RADAR</div>
-          <div class="sample-section-content">
-            <p><strong>3 projects showing signs of life for Q2 2026:</strong></p>
-            <p>&bull; <strong>[Developer A] &mdash; Midtown Toronto</strong> &mdash; 280 units, est. late April. $1,150-$1,250 PSF. 4/4 past projects on time. Commission: 4%. <span style="color: var(--green);">LOW RISK</span></p>
-            <p>&bull; <strong>[Developer B] &mdash; Scarborough Town Centre</strong> &mdash; 420 units, May. $950-$1,050 PSF. Extended deposits (5/5/5). Commission: 3.5%. <span style="color: var(--accent-3);">MODERATE RISK</span></p>
-            <p>&bull; <strong>[Developer C] &mdash; Vaughan Metropolitan Centre</strong> &mdash; 350 units, TBD. Strong balance sheet, delayed 2 past projects. Commission: 4%. <span style="color: var(--accent-3);">MODERATE RISK</span></p>
-            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;"><em>[Replace with real projects before sending.]</em></p>
-          </div>
-        </div>
-        <div class="sample-section">
-          <div class="sample-section-label">POLICY DECODER</div>
-          <div class="sample-section-content">
-            <p><strong>The Ontario HST Rebate &mdash; your new best sales tool.</strong></p>
-            <p>Since October 2025, first-time buyers get the full 8% provincial HST rebated on new homes up to $1M. Combined with the federal GST rebate, your buyer saves up to <strong>$130,000</strong>.</p>
-            <p><strong>The 30-second pitch:</strong> <em>"That $750K precon unit? The government is effectively writing your buyer a cheque for $97,500 at closing. This incentive didn't exist a year ago."</em></p>
-          </div>
-        </div>
-        <div class="sample-section">
-          <div class="sample-section-label">THE PLAY</div>
-          <div class="sample-section-content">
-            <p><strong>This week: Map your closing pipeline.</strong></p>
-            <p>Open your CRM. Pull every client who bought precon in 2022-2024. Sort by closing date. The ones closing in 6 months are about to get a letter from the developer &mdash; and they'll be scared. <strong>Call them first.</strong></p>
-            <p>Script: <em>"Hi [name], your unit at [project] is coming up for closing. I want to make sure you know where the market is and what your options are. Can we grab 15 minutes this week?"</em></p>
-          </div>
-        </div>
-        <div class="sample-section">
-          <div class="sample-section-label">THE BOTTOM LINE</div>
-          <div class="sample-section-content">
-            <p><strong>Signal: Completions are about to drop off a cliff.</strong></p>
-            <p>~29K units in 2025 &rarr; ~22K in 2026 &rarr; ~14K in 2027. The cancelled projects were supposed to deliver in 2028-2029. They won't. When immigration reopens in 2027, there won't be enough product.</p>
-            <p><strong>The agents who survive this downturn will own the next cycle.</strong></p>
-          </div>
-        </div>
+        <p><strong>THE NUMBER: 1,599</strong></p>
+        <p>That's how many new condos sold across the GTA in all of 2025.</p>
+        <p>The lowest since 1991. Down 95% from the 2021 peak. Q4 alone? Just 262 sales &mdash; the worst quarter in 34 years.</p>
+        <p>If you're still in this game, you already know what that number feels like. But here's what matters more: where the next sales are coming from.</p>
+        <hr class="sample-divider">
+        <p><strong>LAUNCH RADAR</strong></p>
+        <p>3 projects showing signs of life for Q2 2026:</p>
+        <p>[Developer A] &mdash; Midtown Toronto<br>280 units, est. late April. $1,150-$1,250 PSF.<br>4 of 4 past projects delivered on time. Commission: 4%.<br>Risk: LOW</p>
+        <p>[Developer B] &mdash; Scarborough Town Centre<br>420 units, May launch. $950-$1,050 PSF targeting end-users.<br>Extended deposits (5/5/5). Commission: 3.5%.<br>Risk: MODERATE</p>
+        <p>[Developer C] &mdash; Vaughan Metropolitan Centre<br>350 units, timeline TBD. Strong balance sheet but delayed 2 past projects 6-12 months. Commission: 4%.<br>Risk: MODERATE</p>
+        <p><em>[Replace with real projects before sending.]</em></p>
+        <hr class="sample-divider">
+        <p><strong>POLICY DECODER: The Ontario HST Rebate</strong></p>
+        <p>Your new best sales tool.</p>
+        <p>Since October 2025, first-time buyers get the full 8% provincial HST rebated on new homes up to $1M. Combined with the federal GST rebate, your buyer saves up to $130,000.</p>
+        <p>The 30-second pitch:</p>
+        <p><em>"That $750K precon unit? The government is effectively writing your buyer a cheque for $97,500 at closing. That's not a discount &mdash; it's a rebate the builder can't take away. This incentive didn't exist a year ago."</em></p>
+        <hr class="sample-divider">
+        <p><strong>THE PLAY: Map your closing pipeline</strong></p>
+        <p>Open your CRM right now. Pull every client who bought precon in 2022-2024. Sort by expected closing date.</p>
+        <p>The ones closing in the next 6 months? They're about to get a letter from the developer &mdash; and they're going to be scared.</p>
+        <p>Call them first. Not to sell. To prepare.</p>
+        <p><em>"Hi [name], I'm reaching out because your unit at [project] is coming up for closing. I want to make sure you have all the information you need about where the market is, what your options are, and what to expect. Can we grab 15 minutes this week?"</em></p>
+        <hr class="sample-divider">
+        <p><strong>THE BOTTOM LINE</strong></p>
+        <p>Completions are about to drop off a cliff.</p>
+        <p>~29,000 units completed in 2025. That drops to ~22,000 in 2026 and ~14,000 in 2027. By 2028, we could be looking at sub-10,000.</p>
+        <p>The projects that got cancelled in 2024-2025 were supposed to deliver in 2028-2029. They won't. When demand returns and the immigration taps reopen in 2027, there won't be enough product.</p>
+        <p>The agents who survive this downturn will own the next cycle.</p>
+        <hr class="sample-divider">
+        <p style="font-size: 13px; color: #999;">You're receiving this because you subscribed to The Precon Brief.<br>Forward this to an agent who needs it. &middot; Unsubscribe</p>
       </div>
     </div>
 
     <!-- SAMPLE 2: Platform Launch Issue -->
-    <div class="sample-newsletter" style="border-color: var(--accent);">
-      <div class="sample-header" style="background: linear-gradient(135deg, #1a0a0a 0%, var(--surface) 100%);">
-        <div class="sample-badge" style="background: var(--accent);">PLATFORM LAUNCH</div>
-        <div class="sample-subject">Subject: We built something. Early access for subscribers only.</div>
+    <div class="sample-newsletter">
+      <div class="sample-header">
+        <div class="sample-email-meta">
+          <strong>From:</strong> The Precon Brief &lt;hello@preconbrief.com&gt;<br>
+          <strong>To:</strong> you<br>
+          <strong>Subject:</strong> We built something. Early access for subscribers only. <span class="sample-badge">SPECIAL</span>
+        </div>
       </div>
       <div class="sample-body">
-        <div class="sample-section">
-          <div class="sample-section-label">THE NUMBER</div>
-          <div class="sample-section-content">
-            <strong style="font-size: 2rem; color: var(--accent);">0 &rarr; 1</strong>
-            <p>For months we've been sending you the data. The launches. The plays. Today we're putting it all in one place.</p>
-            <p><strong>We're launching [Platform Name] &mdash; a sales platform built specifically for precon realtors.</strong></p>
-          </div>
-        </div>
-        <div class="sample-section">
-          <div class="sample-section-label">WHAT IT IS</div>
-          <div class="sample-section-content">
-            <p>&bull; <strong>Live Launch Radar</strong> &mdash; every active precon project, updated daily. Pricing, deposits, commissions, developer ratings.</p>
-            <p>&bull; <strong>Developer Scorecards</strong> &mdash; financial health, delivery track record, cancellation history.</p>
-            <p>&bull; <strong>Client-Ready Materials</strong> &mdash; white-label pitch decks, comparison sheets, policy explainers.</p>
-            <p>&bull; <strong>Closing Crisis Toolkit</strong> &mdash; assignment calculators, negotiation scripts, lender contacts.</p>
-            <p style="color: var(--text-muted); font-size: 0.8rem;"><em>[Customize to match your actual platform.]</em></p>
-          </div>
-        </div>
-        <div class="sample-section">
-          <div class="sample-section-label">THE PLAY</div>
-          <div class="sample-section-content">
-            <p><strong>Newsletter subscribers get early access.</strong> Free for 30 days before public launch. No credit card.</p>
-            <p><strong>[Link to platform &mdash; subscriber-only code: PRECON2026]</strong></p>
-          </div>
-        </div>
-        <div class="sample-section">
-          <div class="sample-section-label">THE BOTTOM LINE</div>
-          <div class="sample-section-content">
-            <p>We built this because the newsletter wasn't enough. You told us you needed a daily tool, not just a weekly read.</p>
-            <p><strong>The precon market will come back. The question is whether you'll be positioned when it does.</strong></p>
-          </div>
-        </div>
+        <p><strong>THE NUMBER: 0 &rarr; 1</strong></p>
+        <p>For months we've been sending you the data. The launches. The plays.</p>
+        <p>Today we're putting it all in one place.</p>
+        <p>We're launching [Platform Name] &mdash; a sales platform built specifically for precon realtors.</p>
+        <hr class="sample-divider">
+        <p><strong>WHAT IT IS</strong></p>
+        <p>Live Launch Radar &mdash; every active and upcoming precon project in the GTA, updated daily. Pricing, deposit structures, commissions, developer ratings. All in one dashboard.</p>
+        <p>Developer Scorecards &mdash; financial health, delivery track record, cancellation history. Know before you sell.</p>
+        <p>Client-Ready Materials &mdash; pitch decks, comparison sheets, and policy explainers you can white-label and send directly to buyers.</p>
+        <p>Closing Crisis Toolkit &mdash; assignment calculators, negotiation scripts, and lender contacts for clients closing underwater.</p>
+        <p><em>[Customize features to match your actual platform.]</em></p>
+        <hr class="sample-divider">
+        <p><strong>THE PLAY: You get early access</strong></p>
+        <p>You've been with us from the beginning. That means something.</p>
+        <p>Starting today, every newsletter subscriber gets free access to the core platform for 30 days &mdash; before it opens to the public.</p>
+        <p>No credit card. No commitment. Just log in and see if it makes your week easier.</p>
+        <p><strong>[Link to platform &mdash; subscriber-only access code: PRECON2026]</strong></p>
+        <hr class="sample-divider">
+        <p><strong>THE BOTTOM LINE</strong></p>
+        <p>We built this because the newsletter wasn't enough. You told us you needed more than a weekly read &mdash; you needed a daily tool. So we built one.</p>
+        <p>The precon market will come back. The question is whether you'll be positioned when it does.</p>
+        <hr class="sample-divider">
+        <p style="font-size: 13px; color: #999;">You're receiving this because you subscribed to The Precon Brief.<br>Forward this to an agent who needs it. &middot; Unsubscribe</p>
       </div>
     </div>
 
     <!-- SAMPLE 3: Tariff Issue -->
     <div class="sample-newsletter">
       <div class="sample-header">
-        <div class="sample-badge">ISSUE #6</div>
-        <div class="sample-subject">Subject: $1,500 per home. That's what tariffs cost your buyers now.</div>
+        <div class="sample-email-meta">
+          <strong>From:</strong> The Precon Brief &lt;hello@preconbrief.com&gt;<br>
+          <strong>To:</strong> you<br>
+          <strong>Subject:</strong> $1,500 per home. That's what tariffs cost your buyers now.
+        </div>
       </div>
       <div class="sample-body">
-        <div class="sample-section">
-          <div class="sample-section-label">THE NUMBER</div>
-          <div class="sample-section-content">
-            <strong style="font-size: 2rem; color: var(--accent);">$1,500+</strong>
-            <p>Additional cost per home from US tariffs on steel (25%), aluminum (25%), and lumber (45%). Roughly 40% of HVAC equipment in GTA high-rises is US-imported.</p>
-          </div>
-        </div>
-        <div class="sample-section">
-          <div class="sample-section-label">POLICY DECODER</div>
-          <div class="sample-section-content">
-            <p><strong>Plain English:</strong> Trump imposed 25% on Canadian imports (Feb 2025). Steel/aluminum (March), autos (April). Supreme Court struck some down Feb 2026, but steel, aluminum, and lumber tariffs stay.</p>
-            <p><strong>Buyer script:</strong> <em>"Tariffs are adding $1,500-$3,000 per unit. But that cost is locked in at today's prices. If you wait and tariffs go higher, the next pricing round will be worse. Buying now protects you."</em></p>
-          </div>
-        </div>
-        <div class="sample-section">
-          <div class="sample-section-label">THE PLAY</div>
-          <div class="sample-section-content">
-            <p><strong>Use tariffs as urgency, not fear.</strong> Send to 5 fence-sitters this week:</p>
-            <p><em>"Hi [name] &mdash; US tariffs are adding $1,500-$3,000/unit to construction costs. Projects available now were priced before the full impact. Developers launching later this year will bake it in. Worth considering as you think about timing."</em></p>
-          </div>
-        </div>
-        <div class="sample-section">
-          <div class="sample-section-label">THE BOTTOM LINE</div>
-          <div class="sample-section-content">
-            <p>Developers are absorbing tariff costs for now because demand is too fragile. That math doesn't last. Projects launching late 2026+ will have tariffs baked in.</p>
-            <p><strong>Current pricing is as tariff-insulated as it's going to get.</strong></p>
-          </div>
-        </div>
+        <p><strong>THE NUMBER: $1,500+</strong></p>
+        <p>That's the estimated additional cost per home from US tariffs on steel, aluminum, and lumber that took effect in 2025.</p>
+        <p>Steel and aluminum face 25% tariffs. Lumber got hit with 45% combined duties. And roughly 40% of HVAC/mechanical equipment used in GTA high-rises is imported from the US.</p>
+        <p>Your buyers are going to ask about this. Here's exactly what to tell them.</p>
+        <hr class="sample-divider">
+        <p><strong>POLICY DECODER: The tariff situation in plain English</strong></p>
+        <p>In Feb 2025, Trump imposed 25% tariffs on most Canadian imports. Canada retaliated. Then 25% on steel/aluminum (March 2025), then autos (April 2025).</p>
+        <p>The Supreme Court struck down some tariffs in Feb 2026, but steel, aluminum, and lumber tariffs were NOT affected &mdash; those stay.</p>
+        <p>What this means for precon: construction costs go up modestly ($1,500-$3,000 per unit). But the bigger impact is confidence. The trade war creates uncertainty, and uncertainty kills buyer decisions.</p>
+        <p>The 30-second buyer script:</p>
+        <p><em>"Yes, tariffs are adding some cost to new construction &mdash; roughly $1,500-$3,000 per unit. But here's the thing: that cost increase is locked in by the developer at today's prices. If you wait, and tariffs go higher, the next round of pricing will be worse. Buying now actually protects you from further increases."</em></p>
+        <hr class="sample-divider">
+        <p><strong>THE PLAY: Use tariffs as urgency, not fear</strong></p>
+        <p>Most agents either ignore tariffs or use them to create panic. Both are wrong. The smart play is to position them as a reason to lock in pricing now.</p>
+        <p>Send this to 5 fence-sitting buyers this week:</p>
+        <p><em>"Hi [name], quick note &mdash; you may have seen coverage about US tariffs on construction materials. The impact on current precon pricing is modest ($1,500-$3,000/unit), but developers launching later this year will price those costs in from the start. The projects available now were priced before the full tariff impact. Something to consider as you're evaluating timing."</em></p>
+        <hr class="sample-divider">
+        <p><strong>THE BOTTOM LINE</strong></p>
+        <p>Most developers pricing projects in Q1-Q2 2026 are eating the tariff increase rather than passing it on, because demand is too fragile. But that math doesn't last forever.</p>
+        <p>Projects launching in late 2026 and 2027 will have tariff costs baked into pricing from day one.</p>
+        <p>Current pricing is as tariff-insulated as it's going to get.</p>
+        <hr class="sample-divider">
+        <p style="font-size: 13px; color: #999;">You're receiving this because you subscribed to The Precon Brief.<br>Forward this to an agent who needs it. &middot; Unsubscribe</p>
       </div>
     </div>
   </div>
