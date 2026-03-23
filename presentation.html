@@ -12,7 +12,22 @@
 <meta name="twitter:title" content="GTA Precon Realtor Newsletter Strategy">
 <meta name="twitter:description" content="A data-driven newsletter campaign strategy for reaching GTA pre-construction realtors — built on psychological profiling, market intelligence, and tactical content design.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230a0a0f'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%23ff4d4d' font-family='sans-serif' font-weight='900'>P</text></svg>">
-<title>GTA Precon Realtor Newsletter Strategy — March 2026</title>
+<title>GTA Precon Realtor Newsletter | Data. Deals. Direction.</title>
+<link rel="canonical" href="https://pcf-newsletter.vercel.app/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "GTA Precon Realtor Newsletter | Data. Deals. Direction.",
+  "description": "A data-driven newsletter campaign strategy for reaching GTA pre-construction realtors.",
+  "url": "https://pcf-newsletter.vercel.app/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "PCF Newsletter",
+    "url": "https://pcf-newsletter.vercel.app/"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -52,7 +67,7 @@
   /* Navigation */
   nav {
     position: fixed;
-    top: 0;
+    top: 3px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -1157,6 +1172,540 @@
     }
   }
 
+  /* Scroll Progress Bar */
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--accent);
+    z-index: 1001;
+    transition: width 0.1s linear;
+    pointer-events: none;
+  }
+
+  /* Hero CTA Button */
+  .hero-cta-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2.5rem;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: box-shadow 0.3s, transform 0.2s;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-cta-btn:hover {
+    box-shadow: 0 0 30px rgba(255, 77, 77, 0.5), 0 0 60px rgba(255, 77, 77, 0.2);
+    transform: translateY(-2px);
+  }
+
+  /* Signup Card */
+  .signup-card {
+    background: var(--surface);
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .signup-headline {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+
+  .signup-subtext {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .signup-form {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .signup-input {
+    flex: 1;
+    min-width: 220px;
+    padding: 0.875rem 1.25rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    color: var(--text);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .signup-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .signup-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.2);
+  }
+
+  .signup-btn {
+    padding: 0.875rem 2rem;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: box-shadow 0.3s, transform 0.2s;
+    white-space: nowrap;
+  }
+
+  .signup-btn:hover {
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.4);
+    transform: translateY(-1px);
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-3);
+  }
+
+  .testimonial-quote {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-author {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* Share Bar */
+  .share-bar {
+    position: fixed;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    z-index: 999;
+  }
+
+  .share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+  }
+
+  .share-btn:hover {
+    background: var(--surface-2);
+    color: var(--text);
+    border-color: var(--accent);
+  }
+
+  /* Sticky Mobile Bar */
+  .sticky-mobile-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .sticky-mobile-bar.visible {
+    transform: translateY(0);
+  }
+
+  .sticky-mobile-form {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .sticky-mobile-input {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    color: var(--text);
+    font-size: 0.85rem;
+    font-family: inherit;
+    outline: none;
+    min-width: 0;
+  }
+
+  .sticky-mobile-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .sticky-mobile-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.2);
+  }
+
+  .sticky-mobile-btn {
+    padding: 0.65rem 1.25rem;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+
+  /* Final nudge */
+  .final-nudge {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    color: var(--accent);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Mobile adjustments for new elements */
+  @media (max-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonial-card:hover {
+      transform: none;
+    }
+
+    .share-bar {
+      display: none;
+    }
+
+    .sticky-mobile-bar {
+      display: block;
+    }
+
+    .signup-card {
+      padding: 2rem 1.25rem;
+    }
+
+    .signup-form {
+      flex-direction: column;
+    }
+
+    .signup-input {
+      min-width: auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .signup-card {
+      padding: 1.5rem 1rem;
+    }
+
+    .signup-headline {
+      font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+
+    .testimonial-card {
+      padding: 1.25rem;
+    }
+  }
+
+  /* Launch Badge */
+  .launch-badge {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.5rem 1.5rem;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid var(--accent-3);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-3);
+    letter-spacing: 0.02em;
+  }
+
+  /* Forward Card */
+  .forward-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .forward-card-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .forward-icon {
+    flex-shrink: 0;
+    color: var(--accent-3);
+  }
+
+  .forward-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .forward-text strong {
+    font-size: 1rem;
+    color: var(--text);
+  }
+
+  .forward-text span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .copy-link-btn {
+    flex-shrink: 0;
+    padding: 0.65rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--accent-3);
+    border-radius: 100px;
+    color: var(--accent-3);
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    white-space: nowrap;
+  }
+
+  .copy-link-btn:hover {
+    background: var(--accent-3);
+    color: var(--bg);
+  }
+
+  .copy-link-btn.copied {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--bg);
+  }
+
+  /* Subscriber Proof */
+  .subscriber-proof {
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .subscriber-count {
+    font-weight: 700;
+    color: var(--accent-3);
+    animation: subtlePulse 2s ease-in-out infinite;
+  }
+
+  @keyframes subtlePulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  /* Referral Milestones */
+  .referral-milestones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 2rem 0;
+  }
+
+  .referral-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem 1.75rem;
+    text-align: center;
+    flex: 1;
+    max-width: 320px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .referral-step:hover {
+    border-color: var(--accent-3);
+    transform: translateY(-4px);
+  }
+
+  .referral-num {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 215, 0, 0.12);
+    border: 2px solid var(--accent-3);
+    border-radius: 50%;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--accent-3);
+  }
+
+  .referral-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+  }
+
+  .referral-reward {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .referral-connector {
+    width: 40px;
+    height: 2px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  /* Exit Intent Overlay */
+  .exit-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .exit-overlay.active {
+    display: flex;
+  }
+
+  .exit-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: exitSlideIn 0.3s ease;
+  }
+
+  @keyframes exitSlideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .exit-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.75rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem;
+    transition: color 0.2s;
+  }
+
+  .exit-close:hover {
+    color: var(--text);
+  }
+
+  .exit-headline {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .exit-subhead {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+  }
+
+  /* Mobile adjustments for new elements */
+  @media (max-width: 768px) {
+    .forward-card-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .referral-milestones {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .referral-connector {
+      width: 2px;
+      height: 24px;
+    }
+
+    .referral-step {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .referral-step:hover {
+      transform: none;
+    }
+  }
+
   /* Print styles */
   @media print {
     :root {
@@ -1175,6 +1724,14 @@
     }
     body { background: #fff; color: #000; }
     nav { display: none; }
+    .scroll-progress { display: none; }
+    .share-bar { display: none; }
+    .sticky-mobile-bar { display: none; }
+    .signup-card { border-color: #ccc; }
+    .hero-cta-btn { display: none; }
+    .exit-overlay { display: none !important; }
+    .forward-card { border-color: #ccc; }
+    .launch-badge { border-color: #996600; color: #996600; }
     section {
       min-height: auto;
       scroll-snap-align: none;
@@ -1200,6 +1757,8 @@
 </head>
 <body>
 
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
 <a href="#main-content" class="skip-link" style="position:absolute;top:-100%;left:0;background:var(--accent);color:#fff;padding:0.75rem 1.5rem;z-index:10000;font-weight:600;font-size:0.9rem;text-decoration:none;border-radius:0 0 8px 0;" onfocus="this.style.top='0'" onblur="this.style.top='-100%'">Skip to content</a>
 
 <nav role="navigation" aria-label="Main navigation">
@@ -1217,6 +1776,7 @@
     <li><a href="#rollout">Rollout</a></li>
     <li><a href="#psychology">Psychology</a></li>
     <li><a href="#data">Data</a></li>
+    <li><a href="#signup-mid" style="color:var(--accent);">Subscribe</a></li>
   </ul>
 </nav>
 
@@ -1224,10 +1784,12 @@
 <main id="main-content">
 <section class="hero" id="hero" aria-label="Hero introduction">
   <div class="fade-up">
-    <div class="kicker">Research Synthesis & Campaign Blueprint</div>
-    <h1>The GTA Precon Realtor<br>Newsletter Strategy</h1>
-    <p class="subtitle">A psychological profile of today's pre-construction realtor and a data-driven newsletter campaign designed to reach them where they are.</p>
+    <div class="kicker">A FREE WEEKLY NEWSLETTER</div>
+    <h1>Data. Deals. Direction.</h1>
+    <p class="subtitle">The weekly brief for GTA precon realtors who are staying in the fight.</p>
     <div class="date-badge">March 2026 &mdash; Compiled from 30+ sources</div>
+    <a href="#signup-mid" class="hero-cta-btn">Get the First Issue Free</a>
+    <div class="launch-badge">Issue #1 drops April 1, 2026</div>
   </div>
 </section>
 
@@ -1274,9 +1836,9 @@
 <!-- PSYCHOLOGICAL PROFILE -->
 <section id="profile" aria-label="Psychological profile">
   <div class="fade-up">
-    <div class="section-kicker">Part 1 &mdash; Psychological Profile</div>
-    <h2 class="section-title">What the GTA precon realtor<br>is feeling right now.</h2>
-    <p class="section-subtitle">The dominant emotions, ranked by intensity. Understanding these is the foundation of any content strategy that actually connects.</p>
+    <div class="section-kicker">WE GET IT</div>
+    <h2 class="section-title">We know what you're feeling.</h2>
+    <p class="section-subtitle">Because we talk to agents like you every day.</p>
     <div class="emotions-grid">
       <div class="emotion-card">
         <div class="rank">#1 DOMINANT EMOTION</div>
@@ -1321,7 +1883,7 @@
 <!-- IDENTITY CRISIS -->
 <section aria-label="The broken playbook">
   <div class="fade-up">
-    <div class="section-kicker">The Deeper Issue</div>
+    <div class="section-kicker">THE HARD TRUTH</div>
     <h2 class="section-title">The playbook is broken.</h2>
     <p class="section-subtitle">The entire precon business model &mdash; VIP launches, platinum access, investor clients flipping on assignment &mdash; has evaporated.</p>
     <div class="stats-row">
@@ -1366,7 +1928,7 @@
 <!-- INFORMATION NEEDS -->
 <section id="needs" aria-label="Information needs">
   <div class="fade-up">
-    <div class="section-kicker">What They're Searching For</div>
+    <div class="section-kicker">WHAT YOU ACTUALLY NEED</div>
     <h2 class="section-title">The information hierarchy.</h2>
     <p class="section-subtitle">Ranked by urgency. Every piece of newsletter content should map to one of these needs.</p>
     <table class="needs-table">
@@ -1391,15 +1953,34 @@
   </div>
 </section>
 
+<!-- FORWARD CALLOUT -->
+<section aria-label="Share with a colleague" style="min-height:auto; padding-top:1rem; padding-bottom:1rem;">
+  <div class="fade-up">
+    <div class="forward-card">
+      <div class="forward-card-inner">
+        <div class="forward-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="forward-text">
+          <strong>Know a precon agent who needs this?</strong>
+          <span>Send them the link. They'll thank you Tuesday morning.</span>
+        </div>
+        <button type="button" class="copy-link-btn" id="copyLinkBtn" aria-label="Copy page link to clipboard">Copy Link</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- STRATEGY / POSITIONING -->
 <section id="strategy" aria-label="Newsletter strategy and positioning">
   <div class="fade-up">
-    <div class="section-kicker">Part 2 &mdash; Newsletter Strategy</div>
+    <div class="section-kicker">HERE'S THE PLAN</div>
     <h2 class="section-title">The positioning.</h2>
     <p class="section-subtitle">Every other newsletter is either cheerleading or doom-scrolling. Neither serves the agent who needs to operate in this market right now.</p>
     <div class="positioning-block">
       <div class="tagline">Not optimistic. Not pessimistic.<br>Operational.</div>
       <p>The unflinching, practical, data-driven guide for precon realtors who are choosing to stay in the game.</p>
+      <p style="margin-top: 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); letter-spacing: 0.02em;">Every Tuesday. 3 minutes. One play you can run this week.</p>
       <div class="tagline-options">
         <div class="tagline-option">"Intelligence for realtors who aren't leaving."</div>
         <div class="tagline-option">"Data. Deals. Direction."</div>
@@ -1427,10 +2008,30 @@
   </div>
 </section>
 
+<!-- SOCIAL PROOF -->
+<section aria-label="Testimonials" style="min-height:auto; padding-top:2rem; padding-bottom:2rem;">
+  <div class="fade-up">
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"[PLACEHOLDER] This is the only newsletter I open before my coffee."</p>
+        <div class="testimonial-author">&mdash; Senior Agent, Re/MAX Hallmark</div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"[PLACEHOLDER] Finally someone who gives us plays, not predictions."</p>
+        <div class="testimonial-author">&mdash; Precon Specialist, Royal LePage</div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"[PLACEHOLDER] I forwarded last week's issue to my entire team."</p>
+        <div class="testimonial-author">&mdash; Broker, Keller Williams</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- THE TEMPLATE -->
 <section id="template" aria-label="Newsletter template">
   <div class="fade-up">
-    <div class="section-kicker">The Template</div>
+    <div class="section-kicker">WHAT YOU GET EVERY TUESDAY</div>
     <h2 class="section-title">Five recurring sections.</h2>
     <p class="section-subtitle">Each section maps to a psychological need. Together they create an emotional arc from validation to clarity.</p>
     <div class="template-cards">
@@ -1481,10 +2082,25 @@
   </div>
 </section>
 
+<!-- MID-PAGE SIGNUP -->
+<section id="signup-mid" aria-label="Newsletter signup" style="min-height:auto; padding-top:2rem; padding-bottom:2rem;">
+  <div class="fade-up">
+    <div class="signup-card">
+      <h2 class="signup-headline">Stop scrolling. Start surviving.</h2>
+      <p class="signup-subtext">Every Tuesday. 3 minutes. One play you can run this week.</p>
+      <form action="#" method="post" class="signup-form">
+        <input type="email" name="email" placeholder="you@brokerage.com" required aria-label="Email address" class="signup-input">
+        <button type="submit" class="signup-btn">Subscribe Free</button>
+      </form>
+      <p class="subscriber-proof">Join <span class="subscriber-count">147</span> precon agents who subscribe</p>
+    </div>
+  </div>
+</section>
+
 <!-- ROLLOUT -->
 <section id="rollout" aria-label="Campaign rollout plan">
   <div class="fade-up">
-    <div class="section-kicker">Campaign Rollout</div>
+    <div class="section-kicker">THE FIRST 8 WEEKS</div>
     <h2 class="section-title">First 8 issues. Pre-planned.</h2>
     <p class="section-subtitle">Each issue anchored by a theme, a number, and a play.</p>
     <div class="timeline">
@@ -1543,7 +2159,7 @@
 <!-- SUBJECT LINES -->
 <section aria-label="Subject line strategy">
   <div class="fade-up">
-    <div class="section-kicker">Subject Line Strategy</div>
+    <div class="section-kicker">INBOX PREVIEW</div>
     <h2 class="section-title">Lead with a number.<br>Never use clickbait.</h2>
     <p class="section-subtitle">Formula: [Specific number or fact] + [relevance to their world]. Under 50 characters. 33% of recipients open based on subject line alone.</p>
     <div class="subject-lines">
@@ -1578,7 +2194,7 @@
 <!-- GROWTH -->
 <section aria-label="Growth and distribution">
   <div class="fade-up">
-    <div class="section-kicker">Growth & Distribution</div>
+    <div class="section-kicker">HOW IT SPREADS</div>
     <h2 class="section-title">How it spreads.</h2>
     <div class="two-col">
       <div class="col-card">
@@ -1606,7 +2222,7 @@
 <!-- PSYCHOLOGY -->
 <section id="psychology" aria-label="Emotional arc psychology">
   <div class="fade-up">
-    <div class="section-kicker">Part 3 &mdash; Why This Works</div>
+    <div class="section-kicker">THE EMOTIONAL ARC</div>
     <h2 class="section-title">The emotional arc<br>of every issue.</h2>
     <p class="section-subtitle">Each section addresses a specific emotion. The reader moves from validation to clarity in 3-5 minutes.</p>
     <div class="arc-steps">
@@ -1651,7 +2267,7 @@
 <!-- MONETIZATION -->
 <section aria-label="Monetization tiers">
   <div class="fade-up">
-    <div class="section-kicker">Monetization</div>
+    <div class="section-kicker">WHEN WE GROW</div>
     <h2 class="section-title">When you're ready to charge.</h2>
     <div class="tiers">
       <div class="tier-card">
@@ -1694,10 +2310,38 @@
   </div>
 </section>
 
+<!-- REFERRAL PROGRAM -->
+<section aria-label="Referral program">
+  <div class="fade-up">
+    <div class="section-kicker">UNLOCK MORE</div>
+    <h2 class="section-title">Share the intel. Earn rewards.</h2>
+    <p class="section-subtitle">The more colleagues you bring in, the more you unlock. Simple.</p>
+    <div class="referral-milestones">
+      <div class="referral-step">
+        <div class="referral-num">3</div>
+        <div class="referral-label">Share with 3 colleagues</div>
+        <div class="referral-reward">Early Launch Radar access (48hrs before everyone else)</div>
+      </div>
+      <div class="referral-connector" aria-hidden="true"></div>
+      <div class="referral-step">
+        <div class="referral-num">5</div>
+        <div class="referral-label">Share with 5 colleagues</div>
+        <div class="referral-reward">Weekly developer financial health ratings</div>
+      </div>
+      <div class="referral-connector" aria-hidden="true"></div>
+      <div class="referral-step">
+        <div class="referral-num">10</div>
+        <div class="referral-label">Share with 10 colleagues</div>
+        <div class="referral-reward">Monthly 1-on-1 market brief call</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- DATA APPENDIX -->
 <section id="data" aria-label="Data appendix">
   <div class="fade-up">
-    <div class="section-kicker">Appendix</div>
+    <div class="section-kicker">THE RAW DATA</div>
     <h2 class="section-title">Key data points.</h2>
     <p class="section-subtitle">The numbers behind the strategy. All data as of March 2026.</p>
     <div class="data-grid">
@@ -1754,13 +2398,59 @@
     <div class="final-quote">
       "The reader closes each issue feeling slightly more <em>informed</em>, slightly more <em>capable</em>, and slightly less <em>alone</em> than when they opened it.<br><br>That's enough.<br>That's everything in this market."
     </div>
-    <div class="sources">
-      Sources: Urbanation &middot; TRREB &middot; RBC Economics &middot; TD Economics &middot; Bank of Canada &middot; CMHC &middot; Storeys &middot; CBC &middot; Bloomberg &middot; RE/MAX &middot; Altus Group &middot; CHBA &middot; Canadian Mortgage Professional &middot; BlogTO &middot; Move Smartly &middot; Deeded &middot; Real Estate Magazine &middot; Globe and Mail &middot; HousingWire &middot; ZeroFlux &middot; The Close &middot; Inman
-      <br><br>Research compiled March 23, 2026
+    <p class="final-nudge">The first issue drops next Tuesday. Don't miss it.</p>
+    <a href="#signup-final" class="hero-cta-btn" style="margin-bottom:2rem;">Get the First Issue Free</a>
+  </div>
+</section>
+
+<!-- FINAL CTA SIGNUP -->
+<section id="signup-final" aria-label="Final newsletter signup" style="min-height:auto; padding-top:2rem; padding-bottom:2rem;">
+  <div class="fade-up">
+    <div class="signup-card">
+      <h2 class="signup-headline">The first issue drops next Tuesday.</h2>
+      <p class="signup-subtext">Every Tuesday. 3 minutes. One play you can run this week.</p>
+      <form action="#" method="post" class="signup-form">
+        <input type="email" name="email" placeholder="you@brokerage.com" required aria-label="Email address" class="signup-input">
+        <button type="submit" class="signup-btn">Subscribe Free</button>
+      </form>
     </div>
   </div>
 </section>
+
+<!-- SOURCES -->
+<footer role="contentinfo">
+<section class="final-section" aria-label="Sources" style="min-height:auto; padding-top:1rem; padding-bottom:2rem;">
+  <div class="fade-up">
+    <div class="sources">
+      Sources: Urbanation &middot; TRREB &middot; RBC Economics &middot; TD Economics &middot; Bank of Canada &middot; CMHC &middot; Storeys &middot; CBC &middot; Bloomberg &middot; RE/MAX &middot; Altus Group &middot; CHBA &middot; Canadian Mortgage Professional &middot; BlogTO &middot; Move Smartly &middot; Deeded &middot; Real Estate Magazine &middot; Globe and Mail &middot; HousingWire &middot; ZeroFlux &middot; The Close &middot; Inman
+      <br><br>Research compiled March 23, 2026
+      <br><br>&copy; 2026 PCF Newsletter. All rights reserved.
+    </div>
+  </div>
+</section>
+</footer>
 </main>
+
+<!-- SHARE BUTTONS (desktop only) -->
+<div class="share-bar" id="shareBar" aria-label="Share this page">
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="share-btn share-linkedin" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a href="https://twitter.com/intent/tweet?text=Data.%20Deals.%20Direction.%20%E2%80%94%20The%20weekly%20brief%20for%20GTA%20precon%20realtors.&url=" class="share-btn share-twitter" title="Share on X / Twitter" target="_blank" rel="noopener noreferrer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a href="mailto:?subject=Data.%20Deals.%20Direction.%20%E2%80%94%20GTA%20Precon%20Newsletter&body=Check%20out%20this%20newsletter%20for%20GTA%20precon%20realtors." class="share-btn share-email" title="Share via Email">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+  </a>
+</div>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-mobile-bar" id="stickyMobileBar" aria-label="Subscribe to newsletter">
+  <form action="#" method="post" class="sticky-mobile-form">
+    <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address" class="sticky-mobile-input">
+    <button type="submit" class="sticky-mobile-btn">Subscribe</button>
+  </form>
+</div>
 
 <script>
   // Scroll-triggered fade-in (respects reduced motion)
@@ -1801,7 +2491,83 @@
       });
     });
   }
+
+  // Scroll progress bar
+  const scrollProgress = document.getElementById('scrollProgress');
+  const stickyMobileBar = document.getElementById('stickyMobileBar');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    if (scrollProgress) {
+      scrollProgress.style.width = scrollPercent + '%';
+    }
+
+    // Sticky mobile bar: show after 300px
+    if (stickyMobileBar) {
+      if (scrollTop > 300) {
+        stickyMobileBar.classList.add('visible');
+      } else {
+        stickyMobileBar.classList.remove('visible');
+      }
+    }
+  }, { passive: true });
+
+  // Copy link button
+  const copyBtn = document.getElementById('copyLinkBtn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        copyBtn.textContent = 'Copied!';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.textContent = 'Copy Link';
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      });
+    });
+  }
+
+  // Exit intent popup (desktop only)
+  (function() {
+    if (window.innerWidth < 769) return;
+    const KEY = 'pcf_exit_shown';
+    if (sessionStorage.getItem(KEY)) return;
+
+    function showExitPopup(e) {
+      if (e.clientY > 0) return;
+      document.removeEventListener('mouseout', showExitPopup);
+      sessionStorage.setItem(KEY, '1');
+
+      const overlay = document.getElementById('exitOverlay');
+      if (overlay) overlay.classList.add('active');
+    }
+
+    document.addEventListener('mouseout', showExitPopup);
+
+    document.addEventListener('click', (e) => {
+      const overlay = document.getElementById('exitOverlay');
+      if (!overlay) return;
+      if (e.target === overlay || e.target.closest('.exit-close')) {
+        overlay.classList.remove('active');
+      }
+    });
+  })();
 </script>
+
+<!-- EXIT INTENT POPUP -->
+<div class="exit-overlay" id="exitOverlay" role="dialog" aria-modal="true" aria-label="Subscribe before you leave">
+  <div class="exit-card">
+    <button type="button" class="exit-close" aria-label="Close dialog">&times;</button>
+    <h2 class="exit-headline">Before you go &mdash;</h2>
+    <p class="exit-subhead">The first issue is free. Don't miss it.</p>
+    <form action="#" method="post" class="signup-form" style="margin-top:1.5rem;">
+      <input type="email" name="email" placeholder="you@brokerage.com" required aria-label="Email address" class="signup-input">
+      <button type="submit" class="signup-btn">Subscribe Free</button>
+    </form>
+  </div>
+</div>
 
 </body>
 </html>
