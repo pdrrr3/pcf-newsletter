@@ -38,7 +38,7 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap disabled */
   }
 
   body {
@@ -94,7 +94,7 @@
   /* Sections */
   section {
     min-height: 100vh;
-    scroll-snap-align: start;
+    /* scroll-snap disabled */
     padding: 100px 2rem 4rem;
     display: flex;
     flex-direction: column;
@@ -695,6 +695,113 @@
     line-height: 1.8;
   }
 
+  /* Charts */
+  .chart-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .chart-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+
+  .chart-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    height: 200px;
+  }
+
+  .chart-y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    padding-bottom: 1.5rem;
+    min-width: 30px;
+    text-align: right;
+  }
+
+  .chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    flex: 1;
+    height: 100%;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+  }
+
+  .chart-bar-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .chart-bar {
+    width: 100%;
+    max-width: 60px;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    min-height: 4px;
+    transition: height 1s ease;
+  }
+
+  .bar-val {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+  }
+
+  .chart-bar-label {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .chart-annotation {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Sparklines in stat cards */
+  .stat-sparkline {
+    margin-bottom: 0.5rem;
+  }
+
+  .sparkline-svg {
+    width: 100%;
+    height: 30px;
+  }
+
+  .stat-compare {
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
   /* Growth Section */
   .two-col {
     display: grid;
@@ -1213,8 +1320,13 @@
     <li><a href="#profile">Profile</a></li>
     <li><a href="#needs">Needs</a></li>
     <li><a href="#strategy">Strategy</a></li>
+    <li><a href="#competitive">Landscape</a></li>
     <li><a href="#template">Template</a></li>
+    <li><a href="#sourcing">Sourcing</a></li>
     <li><a href="#rollout">Rollout</a></li>
+    <li><a href="#distribution">Distribution</a></li>
+    <li><a href="#kpis">KPIs</a></li>
+    <li><a href="#techstack">Tech Stack</a></li>
     <li><a href="#psychology">Psychology</a></li>
     <li><a href="#data">Data</a></li>
   </ul>
@@ -1242,30 +1354,106 @@
         <p>New condo sales hit 1,599 units in 2025 &mdash; the lowest since 1991, down 91% from the decade average. Q4 2025 saw just 262 sales. The worst quarterly figure in 34 years. This isn't a correction. It's a generational low.</p>
       </div>
     </div>
+    <!-- New Condo Sales (Annual) -->
+    <div class="chart-section">
+      <h3 class="chart-title">New Condo Sales — GTA (Annual)</h3>
+      <div class="chart-container">
+        <div class="chart-y-axis">
+          <span>30K</span><span>20K</span><span>10K</span><span>0</span>
+        </div>
+        <div class="chart-bars">
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 90%; background: var(--blue);" data-value="29,300"><span class="bar-val">29.3K</span></div>
+            <div class="chart-bar-label">2021</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 55%; background: var(--blue);" data-value="17,000"><span class="bar-val">17K</span></div>
+            <div class="chart-bar-label">2022</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 38%; background: var(--accent-3);" data-value="11,500"><span class="bar-val">11.5K</span></div>
+            <div class="chart-bar-label">2023</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 15%; background: var(--accent-2);" data-value="4,600"><span class="bar-val">4.6K</span></div>
+            <div class="chart-bar-label">2024</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 5%; background: var(--accent);" data-value="1,599"><span class="bar-val">1,599</span></div>
+            <div class="chart-bar-label">2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-annotation">&#x25BC; 95% from 2021 peak &mdash; lowest since 1991</div>
+    </div>
+
+    <!-- Stat cards with sparklines and YoY context -->
     <div class="stats-row">
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,35 20,32 40,28 60,20 80,10 100,5 120,2" fill="none" stroke="var(--accent)" stroke-width="2"/>
+            <circle cx="120" cy="2" r="3" fill="var(--accent)"/>
+          </svg>
+        </div>
         <div class="stat-value red">28</div>
         <div class="stat-label">Projects cancelled in 2025</div>
+        <div class="stat-compare">vs 9 in 2024, 5 in 2023</div>
       </div>
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,10 20,8 40,5 60,5 80,12 100,18 120,22" fill="none" stroke="var(--accent-3)" stroke-width="2"/>
+            <circle cx="120" cy="22" r="3" fill="var(--accent-3)"/>
+          </svg>
+        </div>
         <div class="stat-value gold">$605K</div>
-        <div class="stat-label">Avg condo price (down 9.8% YoY)</div>
+        <div class="stat-label">Avg condo price</div>
+        <div class="stat-compare">&#x25BC; 9.8% YoY &mdash; was $671K in Jan 2025</div>
       </div>
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,5 15,5 30,5 45,5 60,8 70,12 80,18 90,22 100,28 110,32 120,32" fill="none" stroke="var(--blue)" stroke-width="2"/>
+            <circle cx="120" cy="32" r="3" fill="var(--blue)"/>
+          </svg>
+        </div>
         <div class="stat-value blue">2.25%</div>
         <div class="stat-label">Bank of Canada rate</div>
+        <div class="stat-compare">&#x25BC; from 5.00% peak (Jun 2024)</div>
       </div>
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,30 20,28 40,24 60,18 80,12 100,8 120,5" fill="none" stroke="var(--purple)" stroke-width="2"/>
+            <circle cx="120" cy="5" r="3" fill="var(--purple)"/>
+          </svg>
+        </div>
         <div class="stat-value purple">8.1%</div>
         <div class="stat-label">Toronto unemployment</div>
+        <div class="stat-compare">&#x25B2; from 5.4% in 2023 &mdash; highest since 2012</div>
       </div>
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,35 30,30 60,20 90,8 120,3" fill="none" stroke="var(--accent)" stroke-width="2"/>
+            <circle cx="120" cy="3" r="3" fill="var(--accent)"/>
+          </svg>
+        </div>
         <div class="stat-value red">30-40%</div>
         <div class="stat-label">Losses for 2022-23 investors</div>
+        <div class="stat-compare">Bought ~$1,368 PSF &rarr; now ~$1,000 PSF</div>
       </div>
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,38 80,38 90,38 100,20 120,5" fill="none" stroke="var(--green)" stroke-width="2"/>
+            <circle cx="120" cy="5" r="3" fill="var(--green)"/>
+          </svg>
+        </div>
         <div class="stat-value gold">$130K</div>
-        <div class="stat-label">Max HST rebate (new policy)</div>
+        <div class="stat-label">Max HST rebate (new Oct 2025)</div>
+        <div class="stat-compare">Previously $0 &mdash; first-time buyers on homes &le;$1M</div>
       </div>
     </div>
   </div>
@@ -1324,40 +1512,114 @@
     <div class="section-kicker">The Deeper Issue</div>
     <h2 class="section-title">The playbook is broken.</h2>
     <p class="section-subtitle">The entire precon business model &mdash; VIP launches, platinum access, investor clients flipping on assignment &mdash; has evaporated.</p>
+    <!-- Completions Pipeline Chart -->
+    <div class="chart-section">
+      <h3 class="chart-title">GTA Condo Completions — Pipeline Collapse</h3>
+      <div class="chart-container">
+        <div class="chart-y-axis">
+          <span>30K</span><span>20K</span><span>10K</span><span>0</span>
+        </div>
+        <div class="chart-bars">
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 95%; background: var(--blue);" data-value="29,000+"><span class="bar-val">29K+</span></div>
+            <div class="chart-bar-label">2025</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 72%; background: var(--accent-3);" data-value="22,066"><span class="bar-val">22K</span></div>
+            <div class="chart-bar-label">2026</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 47%; background: var(--accent-2);" data-value="14,366"><span class="bar-val">14.4K</span></div>
+            <div class="chart-bar-label">2027</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height: 15%; background: var(--accent);" data-value="~5,000"><span class="bar-val">~5K?</span></div>
+            <div class="chart-bar-label">2028</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-annotation">&#x25BC; 25% drop in 2026, another 35% in 2027 &mdash; supply correction underway</div>
+    </div>
+
     <div class="stats-row">
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,35 30,30 60,22 90,10 120,2" fill="none" stroke="var(--accent)" stroke-width="2"/>
+            <circle cx="120" cy="2" r="3" fill="var(--accent)"/>
+          </svg>
+        </div>
         <div class="stat-value red">7,000+</div>
         <div class="stat-label">Units cancelled in 2025</div>
+        <div class="stat-compare">vs ~2,500 in 2024, ~1,200 in 2023</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value gold">28,000</div>
-        <div class="stat-label">Units completing in 2026 (closing wave)</div>
-      </div>
-      <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,38 40,35 60,30 80,20 100,10 120,5" fill="none" stroke="var(--blue)" stroke-width="2"/>
+            <circle cx="120" cy="5" r="3" fill="var(--blue)"/>
+          </svg>
+        </div>
         <div class="stat-value blue">~3,000</div>
-        <div class="stat-label">Units taken back by developers in 2025</div>
+        <div class="stat-label">Units taken back by developers</div>
+        <div class="stat-compare">~10% of all pre-sold units registered in 2025</div>
       </div>
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,35 30,30 60,25 90,15 120,5" fill="none" stroke="var(--purple)" stroke-width="2"/>
+            <circle cx="120" cy="5" r="3" fill="var(--purple)"/>
+          </svg>
+        </div>
         <div class="stat-value purple">1M+</div>
         <div class="stat-label">Mortgages renewing in 2026</div>
+        <div class="stat-compare">Many locked in below 2% in 2021 &mdash; payments up 15-40%</div>
       </div>
     </div>
     <div class="stats-row" style="margin-top:0">
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,5 30,5 60,8 90,18 120,30" fill="none" stroke="var(--accent)" stroke-width="2"/>
+            <circle cx="120" cy="30" r="3" fill="var(--accent)"/>
+          </svg>
+        </div>
         <div class="stat-value red">135</div>
-        <div class="stat-label">Active projects (down from 206)</div>
+        <div class="stat-label">Active condo projects</div>
+        <div class="stat-compare">&#x25BC; 34% &mdash; was 206 active projects in 2024</div>
       </div>
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,35 40,28 80,15 120,5" fill="none" stroke="var(--accent-3)" stroke-width="2"/>
+            <circle cx="120" cy="5" r="3" fill="var(--accent-3)"/>
+          </svg>
+        </div>
         <div class="stat-value gold">35,000</div>
         <div class="stat-label">Construction jobs lost</div>
+        <div class="stat-compare">As active projects dropped 34% (206 &rarr; 135)</div>
       </div>
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,35 30,30 60,25 90,15 120,3" fill="none" stroke="var(--green)" stroke-width="2"/>
+            <circle cx="120" cy="3" r="3" fill="var(--green)"/>
+          </svg>
+        </div>
         <div class="stat-value green">3,897</div>
-        <div class="stat-label">Completed unsold units (up 131%)</div>
+        <div class="stat-label">Completed unsold units</div>
+        <div class="stat-compare">&#x25B2; 131% YoY &mdash; was 1,687 in 2024, 5x from 2023</div>
       </div>
       <div class="stat-card">
+        <div class="stat-sparkline">
+          <svg viewBox="0 0 120 40" class="sparkline-svg">
+            <polyline points="0,5 30,5 60,10 90,20 120,30" fill="none" stroke="var(--blue)" stroke-width="2"/>
+            <circle cx="120" cy="30" r="3" fill="var(--blue)"/>
+          </svg>
+        </div>
         <div class="stat-value blue">5-9%</div>
         <div class="stat-label">Rents down YoY</div>
+        <div class="stat-compare">1BR: &#x25BC;7% &bull; 2BR: &#x25BC;9% &mdash; avg now $2,482/mo</div>
       </div>
     </div>
   </div>
